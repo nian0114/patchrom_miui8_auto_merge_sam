@@ -420,7 +420,7 @@
     return-void
 .end method
 
-.method private constructor <init>()V
+.method constructor <init>()V
     .locals 5
 
     .prologue
@@ -2352,10 +2352,10 @@
     .local v0, "ret":Landroid/content/res/Resources;
     if-nez v0, :cond_0
 
-    new-instance v0, Landroid/content/res/Resources;
+    new-instance v0, Landroid/content/res/MiuiResources;
 
     .end local v0    # "ret":Landroid/content/res/Resources;
-    invoke-direct {v0}, Landroid/content/res/Resources;-><init>()V
+    invoke-direct {v0}, Landroid/content/res/MiuiResources;-><init>()V
 
     .restart local v0    # "ret":Landroid/content/res/Resources;
     sput-object v0, Landroid/content/res/Resources;->mSystem:Landroid/content/res/Resources;
@@ -8444,23 +8444,13 @@
     .end local v21    # "mThemeKey":Ljava/lang/String;
     .end local v23    # "out":Ljava/io/FileWriter;
     :cond_c
-    sget-object v4, Landroid/content/res/Resources;->sPreloadedDrawables:[Landroid/util/LongSparseArray;
-
     move-object/from16 v0, p0
 
-    iget-object v5, v0, Landroid/content/res/Resources;->mConfiguration:Landroid/content/res/Configuration;
-
-    invoke-virtual {v5}, Landroid/content/res/Configuration;->getLayoutDirection()I
-
-    move-result v5
-
-    aget-object v4, v4, v5
-
-    invoke-virtual {v4, v10, v11}, Landroid/util/LongSparseArray;->get(J)Ljava/lang/Object;
+    move/from16 v1, p2
+  
+    invoke-virtual {v0, v10, v11, v1}, Landroid/content/res/Resources;->getPreloadedDrawable(JI)Landroid/graphics/drawable/Drawable$ConstantState;
 
     move-result-object v15
-
-    check-cast v15, Landroid/graphics/drawable/Drawable$ConstantState;
 
     .restart local v15    # "cs":Landroid/graphics/drawable/Drawable$ConstantState;
     goto/16 :goto_4
