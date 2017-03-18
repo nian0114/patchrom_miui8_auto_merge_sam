@@ -39,5 +39,6 @@ function mergyXmlPart() {
 }
 
 if [ $1 = "TeleService" ];then
+    applyPatch $1 $2
     appendSmaliPart "TeleService"
 fi
