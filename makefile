@@ -54,3 +54,8 @@ local-pre-zip-misc:
 	@echo Update boot.img
 	cp -rf other/nian_boot.img $(ZIP_DIR)/boot.img
 	cp -rf other/system/* $(ZIP_DIR)/system/
+
+	rm -rf $(ZIP_DIR)/system/preload
+	rm -rf $(ZIP_DIR)/system/preloadedmdm
+	rm -rf $(ZIP_DIR)/system/container
+	rm -rf $(ZIP_DIR)/system/etc/secure_storage/com.sec.knox.store*
