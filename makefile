@@ -19,9 +19,9 @@ local-modified-jars := sec_sdp_hidden_sdk
 # All apks from MIUI
 local-miui-removed-apps :=  MediaProvider SettingsProvider
 
-local-miui-modified-apps := Mms MiuiSystemUI TeleService
+local-miui-modified-apps := Mms TeleService
 
-local-miui-modified-apps-smali := Telecom
+local-miui-modified-apps-smali := MiuiSystemUI Telecom
 
 PORT_PRODUCT := nian_g9350
 

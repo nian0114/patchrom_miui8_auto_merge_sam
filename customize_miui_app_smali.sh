@@ -39,6 +39,10 @@ function changeID() {
   $PORT_ROOT/tools/nametoid.py out/framework-res/res/values/public.xml $1/smali
 }
 
+if [ $1 = "MiuiSystemUI" ];then
+    appendSmaliPart "MiuiSystemUI"
+fi
+
 if [ $1 = "Telecom" ];then
     applyPatch $1 $2
 fi
