@@ -1,0 +1,45 @@
+From 40d365c1fdbc66a93dc9586c2a6a5a57babeefd1 Mon Sep 17 00:00:00 2001
+From: wangtongli <276792882@qq.com>
+Date: Tue, 18 Oct 2016 13:36:38 +0800
+Subject: [PATCH] fix audio-call
+
+---
+ .../smali/com/android/server/telecom/CallAudioManager.smali   | 11 +++++++++--
+ 1 file changed, 9 insertions(+), 2 deletions(-)
+
+--- a/Telecom/smali/com/android/server/telecom/CallAudioManager.smali
++++ b/Telecom/smali/com/android/server/telecom/CallAudioManager.smali
+@@ -1144,7 +1144,7 @@
+ .end method
+ 
+ .method private updateAudioStreamAndMode(Lcom/android/server/telecom/Call;)V
+-    .locals 12
++    .locals 13
+     .param p1, "callToUpdate"    # Lcom/android/server/telecom/Call;
+ 
+     .prologue
+@@ -1192,6 +1192,10 @@
+ 
+     if-eqz v9, :cond_3
+ 
++    const-string v12, "CallState=1"
++
++    invoke-static {v12}, Landroid/media/AudioSystem;->setParameters(Ljava/lang/String;)I
++
+     const-string v9, "updateAudioStreamAndMode : ringing"
+ 
+     new-array v10, v7, [Ljava/lang/Object;
+@@ -1228,6 +1232,10 @@
+ 
+     .restart local v5    # "wasVoiceCall":Z
+     :cond_3
++    const-string v12, "CallState=2"
++
++    invoke-static {v12}, Landroid/media/AudioSystem;->setParameters(Ljava/lang/String;)I
++
+     invoke-direct {p0}, Lcom/android/server/telecom/CallAudioManager;->getForegroundCall()Lcom/android/server/telecom/Call;
+ 
+     move-result-object v1
+-- 
+1.9.1
+
