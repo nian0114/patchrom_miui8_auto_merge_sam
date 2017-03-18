@@ -834,7 +834,7 @@
 
     new-instance v2, Ljava/io/FileReader;
 
-    const-string v3, "/system/etc/wonitor_blacklist.txt"
+    const-string v3, "/system/etc/nian_blacklist.txt"
 
     invoke-direct {v2, v3}, Ljava/io/FileReader;-><init>(Ljava/lang/String;)V
 
