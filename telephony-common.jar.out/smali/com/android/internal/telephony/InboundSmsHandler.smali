@@ -1155,23 +1155,6 @@
     move-result-object v25
 
     .local v25, "values":Landroid/content/ContentValues;
-    const-string v2, "sim_slot"
-
-    move-object/from16 v0, p0
-
-    iget-object v3, v0, Lcom/android/internal/telephony/InboundSmsHandler;->mPhone:Lcom/android/internal/telephony/PhoneBase;
-
-    invoke-virtual {v3}, Lcom/android/internal/telephony/PhoneBase;->getPhoneId()I
-
-    move-result v3
-
-    invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v3
-
-    move-object/from16 v0, v25
-
-    invoke-virtual {v0, v2, v3}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
     move-object/from16 v0, p0
 
