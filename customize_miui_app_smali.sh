@@ -3,6 +3,7 @@
 XMLMERGYTOOL=$PORT_ROOT/tools/ResValuesModify/jar/ResValuesModify
 GIT_APPLY=$PORT_ROOT/tools/git.apply
 
+device_name=`grep "ro.product.device=" stockrom/system/build.prop | cut -d '=' -f2`
 curdir=`pwd`
 
 function applyPatch () {
@@ -29,15 +30,15 @@ function appendSmaliPart() {
   done
 }
 
-function mergyXmlPart() {
-	for file in `find $1/res -name *.xml.part`
-	do
-		src=`dirname $file`
-		dst=${src/$1/$2}
-		$XMLMERGYTOOL $src $dst
-	done
+function isPatchrom() {
+  sed -i -e "s/\"hammerhead\"/\"$device_name\"/g" `grep -lnr "hammerhead" $1/smali`
 }
 
-if [ $1 = "TeleService" ];then
-    appendSmaliPart "TeleService"
+function changeID() {
+  $PORT_ROOT/tools/idtoname.py $PORT_ROOT/tools/public-$2.xml $1/smali
+  $PORT_ROOT/tools/nametoid.py out/framework-res/res/values/public.xml $1/smali
+}
+
+if [ $1 = "Telecom" ];then
+    applyPatch $1 $2
 fi
