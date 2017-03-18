@@ -1,0 +1,935 @@
+
+.field public final mAudioManager:Landroid/media/AudioManager;
+
+.field private final mAudioParamForCallState:Lcom/android/server/telecom/CallAudioManager$AudioParamForCallState;
+
+
+.method static synthetic access$999(Lcom/android/server/telecom/CallAudioManager;I)V
+    .locals 0
+
+    .prologue
+    .line 62
+    invoke-direct {p0, p1}, Lcom/android/server/telecom/CallAudioManager;->setModeSam(I)V
+
+    return-void
+.end method
+
+.method private audioModeToString(I)Ljava/lang/String;
+    .locals 1
+
+    .prologue
+    .line 1435
+    packed-switch p1, :pswitch_data_0
+
+    .line 1451
+    invoke-static {p1}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
+
+    move-result-object v0
+
+    :goto_0
+    return-object v0
+
+    .line 1437
+    :pswitch_0
+    const-string v0, "MODE_INVALID"
+
+    goto :goto_0
+
+    .line 1439
+    :pswitch_1
+    const-string v0, "MODE_CURRENT"
+
+    goto :goto_0
+
+    .line 1441
+    :pswitch_2
+    const-string v0, "MODE_NORMAL"
+
+    goto :goto_0
+
+    .line 1443
+    :pswitch_3
+    const-string v0, "MODE_RINGTONE"
+
+    goto :goto_0
+
+    .line 1445
+    :pswitch_4
+    const-string v0, "MODE_IN_CALL"
+
+    goto :goto_0
+
+    .line 1447
+    :pswitch_5
+    const-string v0, "MODE_IN_VIDEOCALL"
+
+    goto :goto_0
+
+    .line 1449
+    :pswitch_6
+    const-string v0, "MODE_IN_COMMUNICATION"
+
+    goto :goto_0
+
+    .line 1435
+    nop
+
+    :pswitch_data_0
+    .packed-switch -0x2
+        :pswitch_0
+        :pswitch_1
+        :pswitch_2
+        :pswitch_3
+        :pswitch_4
+        :pswitch_6
+        :pswitch_5
+    .end packed-switch
+.end method
+
+.method private setModeSam(I)V
+    .locals 2
+
+    iget-object v1, p0, Lcom/android/server/telecom/CallAudioManager;->mCallsManager:Lcom/android/server/telecom/CallsManager;
+
+    invoke-virtual {v1}, Lcom/android/server/telecom/CallsManager;->getForegroundCall()Lcom/android/server/telecom/Call;
+
+    move-result-object v0
+
+    invoke-direct {p0, p1, v0}, Lcom/android/server/telecom/CallAudioManager;->setModeInternal(ILcom/android/server/telecom/Call;)V
+
+    return-void
+.end method
+
+.method private setModeInternal(ILcom/android/server/telecom/Call;)V
+    .locals 12
+
+    .prologue
+    const/4 v11, 0x5
+
+    const/4 v10, 0x3
+
+    const/4 v9, 0x2
+
+    const/4 v1, 0x1
+
+    const/4 v2, 0x0
+
+    .line 1477
+    iget-object v0, p0, Lcom/android/server/telecom/CallAudioManager;->mAudioManager:Landroid/media/AudioManager;
+
+    invoke-virtual {v0}, Landroid/media/AudioManager;->getMode()I
+
+    move-result v4
+
+    .line 1479
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-direct {p0, v4}, Lcom/android/server/telecom/CallAudioManager;->audioModeToString(I)Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    const-string v3, " -> "
+
+    invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-direct {p0, p1}, Lcom/android/server/telecom/CallAudioManager;->audioModeToString(I)Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v5
+
+    .line 1480
+    sget-object v0, Lcom/android/server/telecom/Log;->TAG:Ljava/lang/String;
+
+    new-instance v3, Ljava/lang/StringBuilder;
+
+    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v6, "perf - CallAudioManager : Request to change audio mode : "
+
+    invoke-virtual {v3, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    invoke-virtual {v3, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-static {v0, v3}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 1484
+    #iget-object v0, p0, Lcom/android/server/telecom/CallAudioManager;->mAudioManager:Landroid/media/AudioManager;
+
+    #invoke-virtual {p0, p2, v0, p1}, Lcom/android/server/telecom/CallAudioManager;->needToChangeModeForAudioParam(Lcom/android/server/telecom/Call;Landroid/media/AudioManager;I)Z
+
+    #move-result v6
+
+    const/4 v6, 0x1
+
+    .line 1487
+    if-eqz p2, :cond_c
+
+    const-string v0, "feature_multisim"
+
+    invoke-static {v0}, Lcom/android/server/telecom/TelecomFeature;->hasFeature(Ljava/lang/String;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_c
+
+    const-string v0, "feature_ctc"
+
+    invoke-static {v0}, Lcom/android/server/telecom/TelecomFeature;->hasFeature(Ljava/lang/String;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_c
+
+    .line 1489
+    invoke-static {p2}, Lcom/android/server/telecom/secutils/TelecomUtilsMultiSIM;->isNetworkRoaming(Lcom/android/server/telecom/Call;)Z
+
+    move-result v0
+
+    move v3, v0
+
+    .line 1491
+    :goto_0
+    if-eqz p2, :cond_b
+
+    const-string v0, "feature_multisim"
+
+    invoke-static {v0}, Lcom/android/server/telecom/TelecomFeature;->hasFeature(Ljava/lang/String;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_b
+
+    .line 1492
+    invoke-virtual {p2}, Lcom/android/server/telecom/Call;->isIncoming()Z
+
+    move-result v0
+
+    if-nez v0, :cond_b
+
+    invoke-virtual {p2}, Lcom/android/server/telecom/Call;->getState()I
+
+    move-result v0
+
+    if-ne v10, v0, :cond_b
+
+    move v0, v1
+
+    .line 1497
+    :goto_1
+    if-eqz p2, :cond_1
+
+    if-ne v4, v1, :cond_1
+
+    const/4 v7, 0x4
+
+    if-ne p1, v7, :cond_1
+
+    invoke-virtual {p2}, Lcom/android/server/telecom/Call;->getState()I
+
+    move-result v7
+
+    if-eq v7, v11, :cond_1
+
+    .line 1498
+    const-string v0, "No change: case 1"
+
+    new-array v1, v2, [Ljava/lang/Object;
+
+    invoke-static {p0, v0, v1}, Lcom/android/server/telecom/Log;->v(Ljava/lang/Object;Ljava/lang/String;[Ljava/lang/Object;)V
+
+    .line 1537
+    :cond_0
+    :goto_2
+
+    .line 1538
+    return-void
+
+    .line 1499
+    :cond_1
+    if-eqz p2, :cond_3
+
+    if-ne p1, v9, :cond_3
+
+    invoke-virtual {p2}, Lcom/android/server/telecom/Call;->getState()I
+
+    move-result v7
+
+    const/16 v8, 0x9
+
+    if-eq v7, v8, :cond_2
+
+    invoke-virtual {p2}, Lcom/android/server/telecom/Call;->getState()I
+
+    move-result v7
+
+    const/4 v8, 0x7
+
+    if-ne v7, v8, :cond_3
+
+    .line 1502
+    :cond_2
+    const-string v0, "No change: case 2"
+
+    new-array v1, v2, [Ljava/lang/Object;
+
+    invoke-static {p0, v0, v1}, Lcom/android/server/telecom/Log;->v(Ljava/lang/Object;Ljava/lang/String;[Ljava/lang/Object;)V
+
+    goto :goto_2
+
+    .line 1503
+    :cond_3
+
+    .line 1508
+    :cond_4
+    if-eqz p2, :cond_6
+
+    if-ne v4, v1, :cond_6
+
+    if-ne p1, v10, :cond_6
+
+    invoke-virtual {p2}, Lcom/android/server/telecom/Call;->getState()I
+
+    move-result v7
+
+    const/16 v8, 0x9
+
+    if-eq v7, v8, :cond_5
+
+    invoke-virtual {p2}, Lcom/android/server/telecom/Call;->getState()I
+
+    move-result v7
+
+    const/4 v8, 0x7
+
+    if-ne v7, v8, :cond_6
+
+    .line 1513
+    :cond_5
+    const-string v0, "No change: case 4"
+
+    new-array v1, v2, [Ljava/lang/Object;
+
+    invoke-static {p0, v0, v1}, Lcom/android/server/telecom/Log;->v(Ljava/lang/Object;Ljava/lang/String;[Ljava/lang/Object;)V
+
+    goto :goto_2
+
+    .line 1515
+    :cond_6
+    if-ne v4, p1, :cond_8
+
+    iget-boolean v4, p0, Lcom/android/server/telecom/CallAudioManager;->mIsModifyCall:Z
+
+    if-eqz v4, :cond_7
+
+    invoke-static {p2}, Lcom/android/server/telecom/secutils/TelecomUtils;->isEpdgCall(Lcom/android/server/telecom/Call;)Z
+
+    move-result v4
+
+    if-eqz v4, :cond_8
+
+    :cond_7
+    if-nez v6, :cond_8
+
+    if-nez v0, :cond_8
+
+    if-eqz v3, :cond_0
+
+    .line 1516
+    :cond_8
+    const-string v0, "feature_multisim"
+
+    invoke-static {v0}, Lcom/android/server/telecom/TelecomFeature;->hasFeature(Ljava/lang/String;)Z
+
+    move-result v0
+    
+    if-eqz v0, :cond_9
+
+    .line 1518
+    if-eqz p2, :cond_9
+
+    invoke-virtual {p2}, Lcom/android/server/telecom/Call;->getState()I
+
+    move-result v0
+
+    const/4 v3, 0x6
+
+    if-eq v0, v3, :cond_9
+
+    .line 1519
+    const-string v0, "call.getState() : %d"
+
+    new-array v1, v1, [Ljava/lang/Object;
+
+    invoke-virtual {p2}, Lcom/android/server/telecom/Call;->getState()I
+
+    move-result v3
+
+    invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v3
+
+    aput-object v3, v1, v2
+
+    invoke-static {p0, v0, v1}, Lcom/android/server/telecom/Log;->v(Ljava/lang/Object;Ljava/lang/String;[Ljava/lang/Object;)V
+
+    .line 1520
+    iget-object v0, p0, Lcom/android/server/telecom/CallAudioManager;->mAudioManager:Landroid/media/AudioManager;
+
+    invoke-static {p2, v0, p1}, Lcom/android/server/telecom/secutils/TelecomUtilsMultiSIM;->setAudioParameters(Lcom/android/server/telecom/Call;Landroid/media/AudioManager;I)V
+
+    .line 1525
+    :cond_9
+    iget-object v0, p0, Lcom/android/server/telecom/CallAudioManager;->mAudioManager:Landroid/media/AudioManager;
+
+    invoke-virtual {p0, p2, v0, p1}, Lcom/android/server/telecom/CallAudioManager;->setAudioParametersForMode(Lcom/android/server/telecom/Call;Landroid/media/AudioManager;I)Z
+
+    move-result v0
+
+    .line 1527
+    if-eqz v0, :cond_a
+
+    .line 1533
+    :goto_3
+    iput p1, p0, Lcom/android/server/telecom/CallAudioManager;->mMostRecentlyUsedMode:I
+
+    .line 1534
+    sget-object v0, Lcom/android/server/telecom/Log;->TAG:Ljava/lang/String;
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v3, "perf - CallAudioManager : Completed to change audio mode : "
+
+    invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
+
+    goto/16 :goto_2
+
+    .line 1531
+    :cond_a
+    iget-object v0, p0, Lcom/android/server/telecom/CallAudioManager;->mAudioManager:Landroid/media/AudioManager;
+
+    invoke-virtual {v0, p1}, Landroid/media/AudioManager;->setMode(I)V
+
+    goto :goto_3
+
+    :cond_b
+    move v0, v2
+
+    goto/16 :goto_1
+
+    :cond_c
+    move v3, v2
+
+    goto/16 :goto_0
+.end method
+
+.method public setAudioParametersForMode(Lcom/android/server/telecom/Call;Landroid/media/AudioManager;I)Z
+    .locals 9
+
+    .prologue
+    const/4 v8, 0x3
+
+    const/16 v7, 0x20
+
+    const/4 v1, 0x1
+
+    const/4 v6, 0x2
+
+    const/4 v0, 0x0
+
+    .line 1582
+    iget-object v2, p0, Lcom/android/server/telecom/CallAudioManager;->mCallsManager:Lcom/android/server/telecom/CallsManager;
+
+    invoke-virtual {v2}, Lcom/android/server/telecom/CallsManager;->getForegroundCall()Lcom/android/server/telecom/Call;
+
+    move-result-object v2
+
+    .line 1584
+    invoke-static {v2}, Lcom/android/server/telecom/secutils/TelecomUtils;->isCSVideoCall(Lcom/android/server/telecom/Call;)Z
+
+    move-result v2
+
+    .line 1585
+    sget-object v3, Lcom/android/server/telecom/Log;->TAG:Ljava/lang/String;
+
+    new-instance v4, Ljava/lang/StringBuilder;
+
+    invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v5, "CallAudioManager : setAudioParametersForMode : mode = "
+
+    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v4
+
+    invoke-direct {p0, p3}, Lcom/android/server/telecom/CallAudioManager;->audioModeToString(I)Ljava/lang/String;
+
+    move-result-object v5
+
+    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v4
+
+    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v4
+
+    invoke-static {v3, v4}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 1586
+    packed-switch p3, :pswitch_data_0
+
+    .line 1671
+    iget-object v1, p0, Lcom/android/server/telecom/CallAudioManager;->mCallsManager:Lcom/android/server/telecom/CallsManager;
+
+    .line 1672
+    if-eqz v1, :cond_f
+
+    invoke-virtual {v1}, Lcom/android/server/telecom/CallsManager;->isInCall()Z
+
+    move-result v2
+
+    if-eqz v2, :cond_f
+
+    invoke-virtual {v1}, Lcom/android/server/telecom/CallsManager;->isRinging()Z
+
+    move-result v1
+
+    if-nez v1, :cond_f
+
+    .line 1673
+    sget-object v1, Lcom/android/server/telecom/Log;->TAG:Ljava/lang/String;
+
+    const-string v2, "CallAudioManager : isInCall alive "
+
+    invoke-static {v1, v2}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 1684
+    :cond_0
+    :goto_0
+    return v0
+
+    .line 1590
+    :pswitch_0
+    if-eqz p1, :cond_1
+
+    invoke-virtual {p1}, Lcom/android/server/telecom/Call;->getExtras()Landroid/os/Bundle;
+
+    move-result-object v2
+
+    invoke-static {v2}, Lcom/android/server/telecom/secutils/TelecomUtils;->isEpdgW2L(Landroid/os/Bundle;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_1
+
+    .line 1591
+    invoke-static {v1}, Lcom/android/server/telecom/secutils/TelecomUtilsAudio;->changeEPDGAudioPath(I)V
+
+    .line 1594
+    :cond_1
+    invoke-virtual {p2}, Landroid/media/AudioManager;->getMode()I
+
+    move-result v1
+
+    if-ne v1, v8, :cond_2
+
+    .line 1595
+    sget-object v1, Lcom/android/server/telecom/Log;->TAG:Ljava/lang/String;
+
+    const-string v2, "CallAudioManager : reset before MODE_IN_CALL"
+
+    invoke-static {v1, v2}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 1596
+    iget-object v1, p0, Lcom/android/server/telecom/CallAudioManager;->mAudioParamForCallState:Lcom/android/server/telecom/CallAudioManager$AudioParamForCallState;
+
+    invoke-virtual {v1}, Lcom/android/server/telecom/CallAudioManager$AudioParamForCallState;->setOffAudioParam()V
+
+    .line 1597
+    invoke-virtual {p2, v0}, Landroid/media/AudioManager;->setMode(I)V
+
+    .line 1600
+    :cond_2
+    invoke-static {p1}, Lcom/android/server/telecom/secutils/TelecomUtils;->isPSVoiceCall(Lcom/android/server/telecom/Call;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_3
+
+    .line 1601
+    iget-object v1, p0, Lcom/android/server/telecom/CallAudioManager;->mAudioParamForCallState:Lcom/android/server/telecom/CallAudioManager$AudioParamForCallState;
+
+    const/16 v2, 0x202
+
+    invoke-virtual {v1, v2}, Lcom/android/server/telecom/CallAudioManager$AudioParamForCallState;->setAudioParam(I)V
+
+    goto :goto_0
+
+    .line 1602
+    :cond_3
+    invoke-static {p1}, Lcom/android/server/telecom/secutils/TelecomUtils;->isPSVideoCall(Lcom/android/server/telecom/Call;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_4
+
+    .line 1603
+    iget-object v1, p0, Lcom/android/server/telecom/CallAudioManager;->mAudioParamForCallState:Lcom/android/server/telecom/CallAudioManager$AudioParamForCallState;
+
+    const/16 v2, 0x402
+
+    invoke-virtual {v1, v2}, Lcom/android/server/telecom/CallAudioManager$AudioParamForCallState;->setAudioParam(I)V
+
+    goto :goto_0
+
+    .line 1605
+    :cond_4
+    iget-object v1, p0, Lcom/android/server/telecom/CallAudioManager;->mAudioParamForCallState:Lcom/android/server/telecom/CallAudioManager$AudioParamForCallState;
+
+    invoke-virtual {v1, v6}, Lcom/android/server/telecom/CallAudioManager$AudioParamForCallState;->setAudioParam(I)V
+
+    goto :goto_0
+
+    .line 1610
+    :pswitch_1
+    const-string v2, "psvt_audio_processing_on_ap"
+
+    invoke-static {v2}, Lcom/android/server/telecom/TelecomFeature;->hasFeature(Ljava/lang/String;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_5
+
+    invoke-static {p1}, Lcom/android/server/telecom/secutils/TelecomUtils;->isPSVideoCall(Lcom/android/server/telecom/Call;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_5
+
+    .line 1611
+    iget-object v1, p0, Lcom/android/server/telecom/CallAudioManager;->mAudioParamForCallState:Lcom/android/server/telecom/CallAudioManager$AudioParamForCallState;
+
+    const/16 v2, 0x400
+
+    invoke-virtual {v1, v2}, Lcom/android/server/telecom/CallAudioManager$AudioParamForCallState;->setAudioParam(I)V
+
+    goto :goto_0
+
+    .line 1612
+    :cond_5
+    if-eqz p1, :cond_7
+
+    invoke-virtual {p1}, Lcom/android/server/telecom/Call;->getExtras()Landroid/os/Bundle;
+
+    move-result-object v2
+
+    invoke-static {v2}, Lcom/android/server/telecom/secutils/TelecomUtils;->isEpdgCall(Landroid/os/Bundle;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_7
+
+    .line 1613
+    invoke-virtual {p2}, Landroid/media/AudioManager;->getMode()I
+
+    move-result v2
+
+    if-ne v2, v6, :cond_6
+
+    .line 1614
+    sget-object v2, Lcom/android/server/telecom/Log;->TAG:Ljava/lang/String;
+
+    const-string v3, "CallAudioManager : reset before MODE_IN_COMMUNICATION"
+
+    invoke-static {v2, v3}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 1615
+    iget-object v2, p0, Lcom/android/server/telecom/CallAudioManager;->mAudioParamForCallState:Lcom/android/server/telecom/CallAudioManager$AudioParamForCallState;
+
+    invoke-virtual {v2}, Lcom/android/server/telecom/CallAudioManager$AudioParamForCallState;->setOffAudioParam()V
+
+    .line 1616
+    invoke-virtual {p2, v0}, Landroid/media/AudioManager;->setMode(I)V
+
+    .line 1619
+    :cond_6
+    iget-object v2, p0, Lcom/android/server/telecom/CallAudioManager;->mAudioParamForCallState:Lcom/android/server/telecom/CallAudioManager$AudioParamForCallState;
+
+    invoke-virtual {v2, v7}, Lcom/android/server/telecom/CallAudioManager$AudioParamForCallState;->setAudioParam(I)V
+
+    .line 1620
+    invoke-virtual {p2, v8}, Landroid/media/AudioManager;->setMode(I)V
+
+    .line 1623
+    invoke-static {v0}, Lcom/android/server/telecom/secutils/TelecomUtilsAudio;->changeEPDGAudioPath(I)V
+
+    move v0, v1
+
+    goto/16 :goto_0
+
+    .line 1625
+    :cond_7
+    invoke-static {}, Lcom/sec/android/app/CscFeature;->getInstance()Lcom/sec/android/app/CscFeature;
+
+    move-result-object v2
+
+    const-string v3, "CscFeature_Common_EnableSprintExtension"
+
+    invoke-virtual {v2, v3}, Lcom/sec/android/app/CscFeature;->getEnableStatus(Ljava/lang/String;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_9
+
+    invoke-static {}, Lcom/android/server/telecom/secutils/TelecomUtils;->isWFCRegistered()Z
+
+    move-result v2
+
+    if-eqz v2, :cond_9
+
+    .line 1626
+    sget-object v2, Lcom/android/server/telecom/Log;->TAG:Ljava/lang/String;
+
+    const-string v3, "CallAudioManager : Set Audio Parameter to voipWifiCalling=on"
+
+    invoke-static {v2, v3}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 1627
+    iget-object v2, p0, Lcom/android/server/telecom/CallAudioManager;->mAudioParamForCallState:Lcom/android/server/telecom/CallAudioManager$AudioParamForCallState;
+
+    invoke-virtual {v2, v1}, Lcom/android/server/telecom/CallAudioManager$AudioParamForCallState;->setAudioParam(I)V
+
+    .line 1628
+    invoke-virtual {p2}, Landroid/media/AudioManager;->getMode()I
+
+    move-result v1
+
+    if-ne v1, v6, :cond_8
+
+    .line 1629
+    invoke-virtual {p2, v0}, Landroid/media/AudioManager;->setMode(I)V
+
+    .line 1630
+    :cond_8
+    iget-object v1, p0, Lcom/android/server/telecom/CallAudioManager;->mAudioParamForCallState:Lcom/android/server/telecom/CallAudioManager$AudioParamForCallState;
+
+    invoke-virtual {v1, v7}, Lcom/android/server/telecom/CallAudioManager$AudioParamForCallState;->setAudioParam(I)V
+
+    goto/16 :goto_0
+
+    .line 1632
+    :cond_9
+    if-eqz p1, :cond_a
+
+    invoke-virtual {p2}, Landroid/media/AudioManager;->getMode()I
+
+    move-result v2
+
+    if-ne v2, v6, :cond_a
+
+    .line 1634
+    iget-object v2, p0, Lcom/android/server/telecom/CallAudioManager;->mAudioParamForCallState:Lcom/android/server/telecom/CallAudioManager$AudioParamForCallState;
+
+    invoke-virtual {v2, v1}, Lcom/android/server/telecom/CallAudioManager$AudioParamForCallState;->setAudioParam(I)V
+
+    .line 1635
+    iget-object v1, p0, Lcom/android/server/telecom/CallAudioManager;->mAudioParamForCallState:Lcom/android/server/telecom/CallAudioManager$AudioParamForCallState;
+
+    invoke-virtual {v1, v7}, Lcom/android/server/telecom/CallAudioManager$AudioParamForCallState;->setAudioParam(I)V
+
+    goto/16 :goto_0
+
+    .line 1638
+    :cond_a
+    iget-object v1, p0, Lcom/android/server/telecom/CallAudioManager;->mAudioParamForCallState:Lcom/android/server/telecom/CallAudioManager$AudioParamForCallState;
+
+    invoke-virtual {v1, v7}, Lcom/android/server/telecom/CallAudioManager$AudioParamForCallState;->setAudioParam(I)V
+
+    goto/16 :goto_0
+
+    .line 1643
+    :pswitch_2
+    const-string v1, "audio_vt_support_by_ap"
+
+    invoke-static {v1}, Lcom/android/server/telecom/TelecomFeature;->hasFeature(Ljava/lang/String;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_b
+
+    .line 1648
+    :goto_1
+    if-eqz v2, :cond_0
+
+    .line 1649
+    sget-object v1, Lcom/android/server/telecom/Log;->TAG:Ljava/lang/String;
+
+    const-string v2, "CallAudioManager call.3rdParty set 1"
+
+    invoke-static {v1, v2}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 1650
+    const-string v1, "call.3rdParty"
+
+    const-string v2, "1"
+
+    invoke-static {v1, v2}, Landroid/os/SystemProperties;->set(Ljava/lang/String;Ljava/lang/String;)V
+
+    goto/16 :goto_0
+
+    .line 1646
+    :cond_b
+    iget-object v1, p0, Lcom/android/server/telecom/CallAudioManager;->mAudioParamForCallState:Lcom/android/server/telecom/CallAudioManager$AudioParamForCallState;
+
+    invoke-virtual {v1, v6}, Lcom/android/server/telecom/CallAudioManager$AudioParamForCallState;->setAudioParam(I)V
+
+    goto :goto_1
+
+    .line 1655
+    :pswitch_3
+    invoke-virtual {p2}, Landroid/media/AudioManager;->getMode()I
+
+    move-result v3
+
+    if-ne v3, v6, :cond_c
+
+    .line 1656
+    iget-object v3, p0, Lcom/android/server/telecom/CallAudioManager;->mAudioParamForCallState:Lcom/android/server/telecom/CallAudioManager$AudioParamForCallState;
+
+    invoke-virtual {v3}, Lcom/android/server/telecom/CallAudioManager$AudioParamForCallState;->setOffAudioParam()V
+
+    .line 1657
+    invoke-virtual {p2, v0}, Landroid/media/AudioManager;->setMode(I)V
+
+    .line 1660
+    :cond_c
+    iget-object v3, p0, Lcom/android/server/telecom/CallAudioManager;->mContext:Landroid/content/Context;
+
+    invoke-static {v3}, Lcom/android/server/telecom/secutils/TelecomUtils;->isInLockTaskMode(Landroid/content/Context;)Z
+
+    move-result v3
+
+    if-nez v3, :cond_0
+
+    .line 1661
+    if-eqz p1, :cond_e
+
+    invoke-virtual {p1}, Lcom/android/server/telecom/Call;->getExtras()Landroid/os/Bundle;
+
+    move-result-object v3
+
+    invoke-static {v3}, Lcom/android/server/telecom/secutils/TelecomUtils;->isEpdgCall(Landroid/os/Bundle;)Z
+
+    move-result v3
+
+    if-eqz v3, :cond_e
+
+    .line 1662
+    :goto_2
+    if-nez v2, :cond_d
+
+    if-eqz v1, :cond_0
+
+    .line 1663
+    :cond_d
+    sget-object v1, Lcom/android/server/telecom/Log;->TAG:Ljava/lang/String;
+
+    const-string v2, "CallAudioManager call.3rdParty set 1"
+
+    invoke-static {v1, v2}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 1664
+    const-string v1, "call.3rdParty"
+
+    const-string v2, "1"
+
+    invoke-static {v1, v2}, Landroid/os/SystemProperties;->set(Ljava/lang/String;Ljava/lang/String;)V
+
+    goto/16 :goto_0
+
+    :cond_e
+    move v1, v0
+
+    .line 1661
+    goto :goto_2
+
+    .line 1677
+    :cond_f
+    sget-object v1, Lcom/android/server/telecom/Log;->TAG:Ljava/lang/String;
+
+    const-string v2, "CallAudioManager : init Audio Parameters: "
+
+    invoke-static {v1, v2}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 1678
+    iget-object v1, p0, Lcom/android/server/telecom/CallAudioManager;->mAudioParamForCallState:Lcom/android/server/telecom/CallAudioManager$AudioParamForCallState;
+
+    invoke-virtual {v1}, Lcom/android/server/telecom/CallAudioManager$AudioParamForCallState;->setOffAudioParam()V
+
+    .line 1679
+    sget-object v1, Lcom/android/server/telecom/Log;->TAG:Ljava/lang/String;
+
+    const-string v2, "CallAudioManager call.3rdParty set 0"
+
+    invoke-static {v1, v2}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 1680
+    const-string v1, "call.3rdParty"
+
+    const-string v2, "0"
+
+    invoke-static {v1, v2}, Landroid/os/SystemProperties;->set(Ljava/lang/String;Ljava/lang/String;)V
+
+    goto/16 :goto_0
+
+    .line 1586
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x1
+        :pswitch_3
+        :pswitch_0
+        :pswitch_1
+        :pswitch_2
+    .end packed-switch
+.end method
+
+
+

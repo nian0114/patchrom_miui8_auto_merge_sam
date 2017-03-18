@@ -1,0 +1,155 @@
+
+.method public isInCall()Z
+    .locals 5
+
+    .prologue
+    const/4 v1, 0x1
+
+    const/4 v2, 0x0
+
+    .line 1104
+    iget-object v0, p0, Lcom/android/server/telecom/CallsManager;->mCalls:Ljava/util/Set;
+
+    invoke-interface {v0}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
+
+    move-result-object v3
+
+    :cond_0
+    invoke-interface {v3}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_3
+
+    invoke-interface {v3}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/android/server/telecom/Call;
+
+    .line 1105
+    invoke-virtual {v0}, Lcom/android/server/telecom/Call;->isActive()Z
+
+    move-result v4
+
+    if-eqz v4, :cond_1
+
+    .line 1106
+    const-string v0, "isInCall()...Active"
+
+    new-array v2, v2, [Ljava/lang/Object;
+
+    invoke-static {p0, v0, v2}, Lcom/android/server/telecom/Log;->i(Ljava/lang/Object;Ljava/lang/String;[Ljava/lang/Object;)V
+
+    move v0, v1
+
+    .line 1115
+    :goto_0
+    return v0
+
+    .line 1109
+    :cond_1
+    invoke-virtual {v0}, Lcom/android/server/telecom/Call;->isAlive()Z
+
+    move-result v4
+
+    if-nez v4, :cond_2
+
+    invoke-virtual {v0}, Lcom/android/server/telecom/Call;->getState()I
+
+    move-result v0
+
+    const/4 v4, 0x4
+
+    if-ne v0, v4, :cond_0
+
+    .line 1110
+    :cond_2
+    const-string v0, "isInCall()...Alive or Ringing"
+
+    new-array v2, v2, [Ljava/lang/Object;
+
+    invoke-static {p0, v0, v2}, Lcom/android/server/telecom/Log;->i(Ljava/lang/Object;Ljava/lang/String;[Ljava/lang/Object;)V
+
+    move v0, v1
+
+    .line 1111
+    goto :goto_0
+
+    .line 1114
+    :cond_3
+    const-string v0, "isInCall()...false"
+
+    new-array v1, v2, [Ljava/lang/Object;
+
+    invoke-static {p0, v0, v1}, Lcom/android/server/telecom/Log;->i(Ljava/lang/Object;Ljava/lang/String;[Ljava/lang/Object;)V
+
+    move v0, v2
+
+    .line 1115
+    goto :goto_0
+.end method
+
+.method public isRinging()Z
+    .locals 4
+
+    .prologue
+    const/4 v1, 0x0
+
+    .line 1119
+    iget-object v0, p0, Lcom/android/server/telecom/CallsManager;->mCalls:Ljava/util/Set;
+
+    invoke-interface {v0}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
+
+    move-result-object v2
+
+    :cond_0
+    invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/android/server/telecom/Call;
+
+    .line 1120
+    invoke-virtual {v0}, Lcom/android/server/telecom/Call;->getState()I
+
+    move-result v0
+
+    const/4 v3, 0x4
+
+    if-ne v0, v3, :cond_0
+
+    .line 1121
+    const-string v0, "Ringing"
+
+    new-array v1, v1, [Ljava/lang/Object;
+
+    invoke-static {p0, v0, v1}, Lcom/android/server/telecom/Log;->i(Ljava/lang/Object;Ljava/lang/String;[Ljava/lang/Object;)V
+
+    .line 1122
+    const/4 v0, 0x1
+
+    .line 1126
+    :goto_0
+    return v0
+
+    .line 1125
+    :cond_1
+    const-string v0, "isRinging()...false"
+
+    new-array v2, v1, [Ljava/lang/Object;
+
+    invoke-static {p0, v0, v2}, Lcom/android/server/telecom/Log;->i(Ljava/lang/Object;Ljava/lang/String;[Ljava/lang/Object;)V
+
+    move v0, v1
+
+    .line 1126
+    goto :goto_0
+.end method
+

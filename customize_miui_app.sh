@@ -38,6 +38,12 @@ function mergyXmlPart() {
 	done
 }
 
+if [ $1 = "Telecom" ];then
+	cp -rf $1/smali $2/
+    appendSmaliPart $1
+	applyPatch $1 $2
+fi
+
 if [ $1 = "TeleService" ];then
     appendSmaliPart "TeleService"
 fi
