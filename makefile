@@ -23,6 +23,8 @@ local-miui-modified-apps := Mms MiuiSystemUI TeleService
 
 local-miui-modified-apps-smali := Telecom
 
+PORT_PRODUCT := nian_g9350
+
 # Config density for co-developers to use the aaps with HDPI or XHDPI resource,
 # Default configrations are HDPI for ics branch and XHDPI for jellybean branch
 local-density := XXXHDPI
