@@ -1315,10 +1315,8 @@
     throw v1
 .end method
 
-.method public setOccluded(ZI)V
+.method public setOccluded(Z)V
     .locals 5
-    .param p1, "isOccluded"    # Z
-    .param p2, "displayId"    # I
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Landroid/os/RemoteException;
@@ -1342,8 +1340,6 @@
 
     :goto_0
     invoke-virtual {v0, v1}, Landroid/os/Parcel;->writeInt(I)V
-
-    invoke-virtual {v0, p2}, Landroid/os/Parcel;->writeInt(I)V
 
     iget-object v1, p0, Lcom/android/internal/policy/IKeyguardService$Stub$Proxy;->mRemote:Landroid/os/IBinder;
 

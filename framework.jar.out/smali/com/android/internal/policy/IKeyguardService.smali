@@ -199,7 +199,7 @@
     .end annotation
 .end method
 
-.method public abstract setOccluded(ZI)V
+.method public abstract setOccluded(Z)V
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Landroid/os/RemoteException;

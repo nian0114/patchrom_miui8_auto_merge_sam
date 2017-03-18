@@ -39,6 +39,10 @@ function changeID() {
   $PORT_ROOT/tools/nametoid.py out/framework-res/res/values/public.xml $1/smali
 }
 
+if [ $1 = "MiuiKeyguard" ];then
+    appendSmaliPart $1
+fi
+
 if [ $1 = "MiuiSystemUI" ];then
     appendSmaliPart "MiuiSystemUI"
 fi

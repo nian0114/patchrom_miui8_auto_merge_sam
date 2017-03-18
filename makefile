@@ -21,7 +21,7 @@ local-miui-removed-apps :=  MediaProvider SettingsProvider
 
 local-miui-modified-apps := Mms TeleService
 
-local-miui-modified-apps-smali := MiuiSystemUI Telecom
+local-miui-modified-apps-smali := MiuiKeyguard MiuiSystemUI Telecom
 
 PORT_PRODUCT := nian_g9350
 

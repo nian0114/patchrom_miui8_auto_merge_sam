@@ -191,12 +191,7 @@
 
     .local v0, "_arg0":Z
     :goto_1
-    invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
-
-    move-result v2
-
-    .local v2, "_arg1":I
-    invoke-virtual {p0, v0, v2}, Lcom/android/internal/policy/IKeyguardService$Stub;->setOccluded(ZI)V
+    invoke-virtual {p0, v0}, Lcom/android/internal/policy/IKeyguardService$Stub;->setOccluded(Z)V
 
     goto :goto_0
 
