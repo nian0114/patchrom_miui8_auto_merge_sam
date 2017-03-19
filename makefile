@@ -68,3 +68,6 @@ local-pre-zip-misc:
 	rm -rf $(ZIP_DIR)/system/preloadedmdm
 	rm -rf $(ZIP_DIR)/system/container
 	rm -rf $(ZIP_DIR)/system/etc/secure_storage/com.sec.knox.store*
+	@echo goodbye! miui prebuilt binaries!
+	cp -rf stockrom/system/bin/app_process64 $(ZIP_DIR)/system/bin/app_process64
+	cp -rf stockrom/system/bin/app_process32 $(ZIP_DIR)/system/bin/app_process32

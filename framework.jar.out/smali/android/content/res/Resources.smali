@@ -360,6 +360,22 @@
 
     sput v1, Landroid/content/res/Resources;->LAYOUT_DIR_CONFIG:I
 
+    const/high16 v1, 0x40000000    # 2.0f
+
+    invoke-static {v1}, Landroid/content/pm/ActivityInfo;->activityInfoConfigToNative(I)I
+
+    move-result v1
+
+    sput v1, Landroid/content/res/Resources;->FONT_SCALE_CONFIG:I
+
+    const/16 v1, 0x1000
+
+    invoke-static {v1}, Landroid/content/pm/ActivityInfo;->activityInfoConfigToNative(I)I
+
+    move-result v1
+
+    sput v1, Landroid/content/res/Resources;->DENSITY_CONFIG:I
+
     new-instance v1, Ljava/lang/Object;
 
     invoke-direct {v1}, Ljava/lang/Object;-><init>()V
@@ -371,6 +387,12 @@
     invoke-direct {v1}, Landroid/util/LongSparseArray;-><init>()V
 
     sput-object v1, Landroid/content/res/Resources;->sPreloadedColorDrawables:Landroid/util/LongSparseArray;
+
+    new-instance v1, Landroid/util/LongSparseArray;
+
+    invoke-direct {v1}, Landroid/util/LongSparseArray;-><init>()V
+
+    sput-object v1, Landroid/content/res/Resources;->sCachedDrawables:Landroid/util/LongSparseArray;
 
     new-instance v1, Landroid/util/LongSparseArray;
 
@@ -1492,6 +1514,17 @@
     :try_start_0
     invoke-virtual/range {v1 .. v6}, Landroid/content/res/DrawableCache;->put(JLandroid/content/res/Resources$Theme;Ljava/lang/Object;Z)V
 
+    iget-boolean v1, p0, Landroid/content/res/Resources;->mCaching:Z
+
+    if-eqz v1, :cond_miui_5
+
+    if-nez p2, :cond_miui_5
+
+    sget-object v1, Landroid/content/res/Resources;->sCachedDrawables:Landroid/util/LongSparseArray;
+
+    invoke-virtual {v1, p6, p7, v5}, Landroid/util/LongSparseArray;->put(JLjava/lang/Object;)V
+
+    :cond_miui_5
     monitor-exit v7
 
     goto :goto_0
@@ -1570,7 +1603,13 @@
 
     invoke-static {v0}, Landroid/content/pm/ActivityInfo;->activityInfoConfigToNative(I)I
 
-    move-result v0
+    move-result v3
+
+    const/high16 v4, -0x80000000
+
+    and-int/2addr v4, v0
+
+    or-int v0, v3, v4
 
     .end local v2    # "density":I
     :cond_2
@@ -2360,6 +2399,10 @@
     .restart local v0    # "ret":Landroid/content/res/Resources;
     sput-object v0, Landroid/content/res/Resources;->mSystem:Landroid/content/res/Resources;
 
+    const/4 v1, 0x0
+
+    invoke-static {v0, v1}, Landroid/miui/ResourcesManager;->initMiuiResource(Landroid/content/res/Resources;Ljava/lang/String;)V
+
     :cond_0
     monitor-exit v2
 
@@ -2738,7 +2781,7 @@
     move-result-object v8
 
     .local v8, "rp":Landroid/content/res/XmlResourceParser;
-    invoke-static {p0, v8, p3}, Landroid/graphics/drawable/Drawable;->createFromXml(Landroid/content/res/Resources;Lorg/xmlpull/v1/XmlPullParser;Landroid/content/res/Resources$Theme;)Landroid/graphics/drawable/Drawable;
+    invoke-virtual {p0, p1, v8, p2, p3}, Landroid/content/res/Resources;->createFromXml(Landroid/util/TypedValue;Landroid/content/res/XmlResourceParser;ILandroid/content/res/Resources$Theme;)Landroid/graphics/drawable/Drawable;
 
     move-result-object v0
 
@@ -2768,10 +2811,7 @@
 
     move-result-object v4
 
-    .local v4, "is":Ljava/io/InputStream;
-    const/4 v9, 0x0
-
-    invoke-static {p0, p1, v4, v2, v9}, Landroid/graphics/drawable/Drawable;->createFromResourceStream(Landroid/content/res/Resources;Landroid/util/TypedValue;Ljava/io/InputStream;Ljava/lang/String;Landroid/graphics/BitmapFactory$Options;)Landroid/graphics/drawable/Drawable;
+    invoke-virtual {p0, p1, v4, v2, p2}, Landroid/content/res/Resources;->createFromResourceStream(Landroid/util/TypedValue;Ljava/io/InputStream;Ljava/lang/String;I)Landroid/graphics/drawable/Drawable;
 
     move-result-object v0
 
@@ -3875,7 +3915,18 @@
     .param p4, "name"    # Ljava/lang/String;
 
     .prologue
-    const v2, -0x40001001    # -1.9995116f
+
+    sget v2, Landroid/content/res/Resources;->FONT_SCALE_CONFIG:I
+
+    sget v3, Landroid/content/res/Resources;->DENSITY_CONFIG:I
+
+    or-int/2addr v2, v3
+
+    const/high16 v3, 0x40000000    # 2.0f
+
+    or-int/2addr v2, v3
+
+    xor-int/lit8 v2, v2, -0x1
 
     and-int/2addr v2, p1
 
@@ -8935,6 +8986,10 @@
 
     iput-object v8, v0, Landroid/content/res/TypedArray;->mXml:Landroid/content/res/XmlBlock$Parser;
 
+    invoke-virtual {p0, v0}, Landroid/content/res/Resources;->loadOverlayTypedArray(Landroid/content/res/TypedArray;)Landroid/content/res/TypedArray;
+
+    move-result-object v0
+
     return-object v0
 .end method
 
@@ -9007,7 +9062,11 @@
 
     aput v4, v2, v4
 
-    return-object v0
+    invoke-virtual {p0, v0}, Landroid/content/res/Resources;->loadOverlayTypedArray(Landroid/content/res/TypedArray;)Landroid/content/res/TypedArray;
+
+    move-result-object v2
+
+    return-object v2
 .end method
 
 .method public openRawResource(I)Ljava/io/InputStream;
