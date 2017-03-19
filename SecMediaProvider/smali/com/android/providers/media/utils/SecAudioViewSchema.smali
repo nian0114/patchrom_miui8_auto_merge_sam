@@ -982,21 +982,11 @@
 .end method
 
 .method public static recreateMusicCacheMapTable(Landroid/database/sqlite/SQLiteDatabase;)V
-    .locals 1
+    .locals 0
     .param p0, "db"    # Landroid/database/sqlite/SQLiteDatabase;
 
     .prologue
     .line 272
-    const-string v0, "DROP TABLE IF EXISTS music_cache_map;"
-
-    invoke-virtual {p0, v0}, Landroid/database/sqlite/SQLiteDatabase;->execSQL(Ljava/lang/String;)V
-
-    .line 273
-    const-string v0, "CREATE TABLE IF NOT EXISTS music_cache_map( _id               INTEGER PRIMARY KEY AUTOINCREMENT, category          INTEGER, keyword           TEXT, title             TEXT, album_id          INTEGER, played_count            INTEGER DEFAULT 0, date_added        INTEGER, number_of_tracks  INTEGER DEFAULT 0, total_duration    INTEGER DEFAULT 0);"
-
-    invoke-virtual {p0, v0}, Landroid/database/sqlite/SQLiteDatabase;->execSQL(Ljava/lang/String;)V
-
-    .line 283
     return-void
 .end method
 
@@ -1620,81 +1610,21 @@
 .end method
 
 .method private static refreshAlbumCacheInfo(Landroid/database/sqlite/SQLiteDatabase;)V
-    .locals 1
+    .locals 0
     .param p0, "db"    # Landroid/database/sqlite/SQLiteDatabase;
 
     .prologue
     .line 294
-    invoke-virtual {p0}, Landroid/database/sqlite/SQLiteDatabase;->beginTransaction()V
-
-    .line 296
-    :try_start_0
-    const-string v0, "DELETE FROM music_cache_map WHERE category = 1;"
-
-    invoke-virtual {p0, v0}, Landroid/database/sqlite/SQLiteDatabase;->execSQL(Ljava/lang/String;)V
-
-    .line 297
-    const-string v0, "INSERT INTO music_cache_map(category, keyword, title, date_added, played_count, album_id)  SELECT 1, album_id, album, date_added, sum(most_played), album_id  FROM audio  WHERE is_music=1  GROUP BY album_id  ORDER BY date_added DESC;"
-
-    invoke-virtual {p0, v0}, Landroid/database/sqlite/SQLiteDatabase;->execSQL(Ljava/lang/String;)V
-
-    .line 303
-    invoke-virtual {p0}, Landroid/database/sqlite/SQLiteDatabase;->setTransactionSuccessful()V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    .line 305
-    invoke-virtual {p0}, Landroid/database/sqlite/SQLiteDatabase;->endTransaction()V
-
-    .line 307
     return-void
-
-    .line 305
-    :catchall_0
-    move-exception v0
-
-    invoke-virtual {p0}, Landroid/database/sqlite/SQLiteDatabase;->endTransaction()V
-
-    throw v0
 .end method
 
 .method private static refreshArtistCacheInfo(Landroid/database/sqlite/SQLiteDatabase;)V
-    .locals 1
+    .locals 0
     .param p0, "db"    # Landroid/database/sqlite/SQLiteDatabase;
 
     .prologue
     .line 310
-    invoke-virtual {p0}, Landroid/database/sqlite/SQLiteDatabase;->beginTransaction()V
-
-    .line 312
-    :try_start_0
-    const-string v0, "DELETE FROM music_cache_map WHERE category = 2;"
-
-    invoke-virtual {p0, v0}, Landroid/database/sqlite/SQLiteDatabase;->execSQL(Ljava/lang/String;)V
-
-    .line 321
-    const-string v0, "INSERT INTO music_cache_map(category, keyword, title, date_added, played_count, album_id)  SELECT 2, a.artist_id, a.artist, a.date_added, sum(most_played), b.album_id FROM audio a, music_artist_info b  WHERE is_music=1 AND a.artist_id = b._id GROUP BY a.artist_id   ORDER BY a.date_added DESC;"
-
-    invoke-virtual {p0, v0}, Landroid/database/sqlite/SQLiteDatabase;->execSQL(Ljava/lang/String;)V
-
-    .line 327
-    invoke-virtual {p0}, Landroid/database/sqlite/SQLiteDatabase;->setTransactionSuccessful()V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    .line 329
-    invoke-virtual {p0}, Landroid/database/sqlite/SQLiteDatabase;->endTransaction()V
-
-    .line 331
     return-void
-
-    .line 329
-    :catchall_0
-    move-exception v0
-
-    invoke-virtual {p0}, Landroid/database/sqlite/SQLiteDatabase;->endTransaction()V
-
-    throw v0
 .end method
 
 .method public static updateMusicCacheMapTable(Landroid/database/sqlite/SQLiteDatabase;)V
