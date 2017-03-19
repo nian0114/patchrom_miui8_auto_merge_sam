@@ -39,7 +39,7 @@ function mergyXmlPart() {
 }
 
 if [ $1 = "TeleService" ];then
-    $XMLMERGYTOOL $1/res/xml $2/res/xml
+    cp -rf $1/res/xml $2/res/xml
     applyPatch $1 $2
     appendSmaliPart "TeleService"
 fi
