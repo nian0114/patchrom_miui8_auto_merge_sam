@@ -13,4 +13,4 @@ local-phone-apps := NfcNci SPrintSpooler6 PacProcessor CertInstaller KeyChain mc
 local-phone-priv-apps := Shell ProxyHandler ContextProvider ExternalStorageProvider \
 	SharedStorageBackup InputDevices BackupRestoreConfirmation NSFusedLocation_Global SimSettingMgr \
 	MtpApplication SecSettingsProvider2 SecMediaProvider ShootingModeProvider \
-	FingerprintService2 OfflineNetworkLocation_Baidu
+	FingerprintService2 OfflineNetworkLocation_Baidu SamsungCamera5
