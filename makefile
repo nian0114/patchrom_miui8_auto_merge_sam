@@ -12,7 +12,7 @@ local-out-zip-file := MIUI_G9350.zip
 local-previous-target-dir :=
 
 # All apps from original ZIP, but has smali files chanded
-local-modified-apps := SecSettingsProvider2
+local-modified-apps := SecSettingsProvider2 SecMediaProvider
 
 local-modified-jars := sec_sdp_hidden_sdk
 

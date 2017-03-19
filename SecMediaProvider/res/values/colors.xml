@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="tw_list_icon_create_mtrl_color">#ff4bae50</color>
+    <color name="tw_list_icon_cicle_mtrl_color">#ffffffff</color>
+    <color name="splanner_primary">#ff1bbc00</color>
+    <color name="splanner_actionbar_bg">#fffafafa</color>
+    <color name="splanner_text">#ff646464</color>
+    <color name="splanner_navigation_up">#ff18a900</color>
+    <color name="call_primary">#ff6ebd52</color>
+    <color name="call_edge_effect">#4d4bae50</color>
+    <color name="call_primary_dark">#ff4b9c2e</color>
+    <color name="call_statusbar">@color/call_primary</color>
+    <color name="call_navigation_up">#fffafafa</color>
+    <color name="call_text">#ffcde6c6</color>
+    <color name="message_primary">#ffeb9500</color>
+    <color name="message_primary_dark">#ffd38600</color>
+    <color name="message_actionbar_bg">#fff0f0f0</color>
+    <color name="message_statusbar">#fff0f0f0</color>
+    <color name="message_navigation_up">#ffeb8500</color>
+    <color name="message_text">#ff646464</color>
+    <color name="contact_primary">#fff19533</color>
+    <color name="contact_edge_effect">#4d4bae50</color>
+    <color name="contact_primary_dark">#ffd17a1d</color>
+    <color name="contact_statusbar">#ffd17a1d</color>
+    <color name="contact_navigation_up">#fffffb90</color>
+</resources>

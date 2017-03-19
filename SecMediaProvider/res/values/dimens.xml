@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="maximum_thumb_size">640.0dip</dimen>
+    <dimen name="inset_for_divider">50.0dip</dimen>
+    <dimen name="tw_select_dialog_item_padding_horizontal">0.0dip</dimen>
+    <dimen name="tw_select_dialog_item_padding_horizontal_footer">0.0dip</dimen>
+    <dimen name="list_item_padding_top">11.75dip</dimen>
+</resources>

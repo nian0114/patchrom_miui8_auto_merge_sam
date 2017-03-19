@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="uid_label">Media</string>
+    <string name="app_label">Mediasäilö</string>
+    <string name="artist_label">Esittäjä</string>
+    <string name="ringtone_default">Oletussoittoääni</string>
+    <string name="notification_sound_default">Oletusilmoitusääni</string>
+    <string name="alarm_sound_default">Hälytyksen oletusääni</string>
+    <string name="root_images">Kuvat</string>
+    <string name="root_videos">Videot</string>
+    <string name="root_audio">Ääni</string>
+    <string name="drm_licensed_message">DRM-suojattua sisältöä ei voi määrittää soittoääneksi tai ilmoitusääneksi.</string>
+    <string name="alert_sound">Hälytysääni</string>
+    <string name="alert_sound_default">Oletushälytysääni</string>
+    <string name="done">Valmis</string>
+    <string name="add_ringtone">Lisää laitteen muistista</string>
+    <string name="unable_to_play_during_call">Puhelun aikana ei voi toistaa.</string>
+    <string name="ok">OK</string>
+    <string name="noti_mbody_to_use_ps">Toim. %s ei voi käyttää</string>
+    <string name="noti_sbody_to_use_ps">Jos haluat käyttää toimintoa %s, napauta ASETUKSET, valitse Sovelluksen tiedot > Käyttöoikeudet ja myönnä sitten seuraavat käyttöoikeudet:</string>
+    <string name="noti_button_settings">Asetukset</string>
+    <string name="upgrade_msg">Päivitetään Median tietokantaa.</string>
+</resources>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="uid_label">Медиа</string>
+    <string name="app_label">Хранилище мультимедиа</string>
+    <string name="artist_label">Исполнитель</string>
+    <string name="ringtone_default">Мелодия по умолчанию</string>
+    <string name="notification_sound_default">Стандартное уведомление</string>
+    <string name="alarm_sound_default">Звуковой сигнал по умолчанию</string>
+    <string name="root_images">Картинки</string>
+    <string name="root_videos">Видео</string>
+    <string name="root_audio">Аудио</string>
+    <string name="drm_licensed_message">Не удалось установить содержимое, защищенное DRM, в качестве мелодии звонка или сигнала уведомления.</string>
+    <string name="alert_sound">Звук сигнала</string>
+    <string name="alert_sound_default">Звук сигнала по умолчанию</string>
+    <string name="done">Готово</string>
+    <string name="add_ringtone">Из памяти устройства</string>
+    <string name="unable_to_play_during_call">Воспроизведение во время вызова невозможно.</string>
+    <string name="ok">ОК</string>
+    <string name="noti_mbody_to_use_ps">Невозможно использ. %s</string>
+    <string name="noti_sbody_to_use_ps">Для использования %s нажмите НАСТРОЙКИ, перейдите в меню “Сведения о приложении” > “Разрешения” и включите следующие разрешения:</string>
+    <string name="noti_button_settings">Настройки</string>
+    <string name="upgrade_msg">Обновление базы данных мультимедиа...</string>
+</resources>

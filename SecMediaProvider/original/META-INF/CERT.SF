@@ -1,0 +1,64 @@
+Signature-Version: 1.0
+Created-By: 1.0 (Android SignApk)
+SHA1-Digest-Manifest: 8BNFohAMjgDnIU5ajBQ/9CcYupQ=
+
+Name: res/layout/tw_select_dialog_singlechoice_material.xml
+SHA1-Digest: X/cmllV00ubvUKPhuc6WhprKgbM=
+
+Name: res/layout/tw_simple_list_item_single_choice.xml
+SHA1-Digest: tnnL7Wi3OzeF3j3DV3MG4JKOaYI=
+
+Name: resources.arsc
+SHA1-Digest: WdtEZrYO3vZE8euYjogwqsHbQKk=
+
+Name: res/drawable-hdpi-v4/ic_search_category_music_artist.qmg
+SHA1-Digest: rYkIGs56oVYpK92H4/cq6ft9c14=
+
+Name: res/drawable/tw_list_icon_create.spr
+SHA1-Digest: nPj/tE27TW36kHFLf+rp3xC1LVo=
+
+Name: res/mipmap-hdpi-v4/ic_launcher_gallery.png
+SHA1-Digest: t1kqeiYcUAaez4UPL1jg7PgxuTA=
+
+Name: res/drawable-hdpi-v4/ic_search_category_music_album.qmg
+SHA1-Digest: pKBr6+WE+yb3AxDpeq0bjCrqv+M=
+
+Name: res/drawable-hdpi-v4/ic_search_category_music_song.qmg
+SHA1-Digest: b/KMNFHysj1tlSyTyIQ0cUXNn+g=
+
+Name: res/drawable/tw_list_icon_create_mtrl.xml
+SHA1-Digest: 86DIJTcetYoYHqu/88X/qmJUOmA=
+
+Name: res/drawable/contacts_home_as_up_indicator.xml
+SHA1-Digest: 0UfnTDQK5TIMfmHhTZxEehMmtTY=
+
+Name: res/mipmap-xhdpi-v4/ic_launcher_gallery.png
+SHA1-Digest: pJ3pP4LxKz/TlUXOaRAjMXEeVb4=
+
+Name: res/drawable/splanner_home_as_up_indicator.xml
+SHA1-Digest: 9UQpBkDwMR1yOHzunZgLfxKADZc=
+
+Name: AndroidManifest.xml
+SHA1-Digest: 9Bpeh6RlPQCxreN732pIUQNqxUo=
+
+Name: res/mipmap-mdpi-v4/ic_launcher_gallery.png
+SHA1-Digest: w3E8VENn/j2BFeTI4NLy59kKbUA=
+
+Name: res/layout/tw_select_dialog_singlechoice_footer_material.xml
+SHA1-Digest: wVN2Iev+yfFiozb0SFkiP8qBkCU=
+
+Name: res/drawable/msg_home_as_up_indicator.xml
+SHA1-Digest: 7kq55y7Zm54cizPWLUsxFnAmUvw=
+
+Name: res/layout/ringtonepicker_main.xml
+SHA1-Digest: 3bILKqYWmoWpBZluTwLVEek8QZU=
+
+Name: res/drawable/call_home_as_up_indicator.xml
+SHA1-Digest: HqCHbuNYm+eKSVdjI/0So0OO2no=
+
+Name: res/drawable/tw_list_icon_circle_mtrl.spr
+SHA1-Digest: hkgZO9Y+I5FoDhqWXINZsb3RSJ0=
+
+Name: res/layout/tw_simple_list_item_single_choice_footer.xml
+SHA1-Digest: AbTbacfTZZuEUcaaIS5sq0CNwhU=
+

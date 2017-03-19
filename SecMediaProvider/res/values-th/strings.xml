@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="uid_label">มี​เดีย</string>
+    <string name="app_label">ที่จัดเก็บสื่อ</string>
+    <string name="artist_label">ศิลปิน</string>
+    <string name="ringtone_default">เสียง​เรียก​เข้า​พื้น​ฐาน</string>
+    <string name="notification_sound_default">เสียงแจ้งเตือนพื้นฐาน</string>
+    <string name="alarm_sound_default">เสียงปลุกเริ่มต้น</string>
+    <string name="root_images">รูป​ภาพ</string>
+    <string name="root_videos">วี​ดี​โอ</string>
+    <string name="root_audio">เสียง</string>
+    <string name="drm_licensed_message">ไม่สามารถตั้งคอนเทนท์ที่มีการป้องกัน DRM เป็นเสียงเรียกเข้าหรือเสียงแจ้งเตือน</string>
+    <string name="alert_sound">เสียงเตือน</string>
+    <string name="alert_sound_default">เสียงเตือนพื้นฐาน</string>
+    <string name="done">เรียบร้อย</string>
+    <string name="add_ringtone">เพิ่มจากที่จัดเก็บในเครื่อง</string>
+    <string name="unable_to_play_during_call">เล่น​ไม่​ได้ ขณะ​โทร</string>
+    <string name="ok">ตกลง</string>
+    <string name="noti_mbody_to_use_ps">ไม่สามารถใช้ %s ได้</string>
+    <string name="noti_sbody_to_use_ps">เมื่อต้องการใช้ %s ให้สัมผัส “การตั้งค่า” แล้วไปที่ ข้อมูลแอพ > การอนุญาต จากนั้นให้อนุญาตดังต่อไปนี้:</string>
+    <string name="noti_button_settings">การ​ตั้ง​ค่า</string>
+    <string name="upgrade_msg">กำลังอัปเกรดฐานข้อมูลสื่อ</string>
+</resources>

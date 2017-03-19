@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="uid_label">Multimedia</string>
+    <string name="app_label">Almacenamiento de contenido multimedia</string>
+    <string name="artist_label">Artista</string>
+    <string name="ringtone_default">Melodía predeterminada</string>
+    <string name="notification_sound_default">Sonido predeterminado</string>
+    <string name="root_images">Imágenes</string>
+    <string name="root_videos">Vídeos</string>
+    <string name="root_audio">Audio</string>
+    <string name="drm_licensed_message">No se puede definir contenido protegido por DRM como melodía o alerta de notificación</string>
+    <string name="alert_sound">Sonido de alerta</string>
+    <string name="alert_sound_default">Sonido predeterminado</string>
+    <string name="done">Hecho</string>
+    <string name="add_ringtone">Añadir de almac disp</string>
+    <string name="unable_to_play_during_call">No se puede reproducir durante la llamada</string>
+    <string name="ok">Aceptar</string>
+    <string name="noti_mbody_to_use_ps">No se puede utilizar %s</string>
+    <string name="noti_sbody_to_use_ps">Para utilizar %s, pulse AJUSTES, vaya a Información de la aplicación > Permisos y, a continuación, conceda los permisos siguientes:</string>
+    <string name="noti_button_settings">Ajustes</string>
+</resources>

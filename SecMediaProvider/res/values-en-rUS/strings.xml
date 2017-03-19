@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="uid_label">Media</string>
+    <string name="app_label">Media Storage</string>
+    <string name="artist_label">Artist</string>
+    <string name="ringtone_default">Default ringtone</string>
+    <string name="notification_sound_default">Default notification sound</string>
+    <string name="root_images">Images</string>
+    <string name="root_videos">Videos</string>
+    <string name="root_audio">Audio</string>
+    <string name="drm_licensed_message">Unable to set DRM protected content as ringtone or notification alert.</string>
+    <string name="alert_sound">Alert sound</string>
+    <string name="alert_sound_default">Default alert sound</string>
+    <string name="done">Done</string>
+    <string name="add_ringtone">Add from device storage</string>
+    <string name="unable_to_play_during_call">Unable to play during call.</string>
+    <string name="ok">OK</string>
+    <string name="noti_mbody_to_use_ps">Unable to use %s</string>
+    <string name="noti_sbody_to_use_ps">To use %s, tap SETTINGS, go to App info > Permissions, then allow the following permissions:</string>
+    <string name="noti_button_settings">Settings</string>
+</resources>

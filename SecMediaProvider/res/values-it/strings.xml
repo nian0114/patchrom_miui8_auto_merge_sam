@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="uid_label">Multimedia</string>
+    <string name="app_label">Archivio multimediale</string>
+    <string name="artist_label">Artista</string>
+    <string name="ringtone_default">Suoneria predefinita</string>
+    <string name="notification_sound_default">Suoneria predef. notifica</string>
+    <string name="alarm_sound_default">Suono sveglia predefinito</string>
+    <string name="root_images">Immagini</string>
+    <string name="root_videos">Video</string>
+    <string name="root_audio">Audio</string>
+    <string name="drm_licensed_message">Impossibile impostare il contenuto protetto di DRM come suoneria o avviso di notifica.</string>
+    <string name="alert_sound">Suono di avviso</string>
+    <string name="alert_sound_default">Suono avviso predefinito</string>
+    <string name="done">Fatto</string>
+    <string name="add_ringtone">Aggiungi da memoria dispos.</string>
+    <string name="unable_to_play_during_call">Impossibile riprodurre durante una chiamata.</string>
+    <string name="ok">OK</string>
+    <string name="noti_mbody_to_use_ps">Impossibile utilizzare %s</string>
+    <string name="noti_sbody_to_use_ps">Per utilizzare %s, toccate IMPOSTAZIONI, andate in Informazioni applicazione > Autorizzazioni, quindi concedete queste autorizzazioni:</string>
+    <string name="noti_button_settings">Impostazioni</string>
+    <string name="upgrade_msg">Upgrade del database di Media.</string>
+</resources>

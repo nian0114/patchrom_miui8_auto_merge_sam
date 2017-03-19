@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="uid_label">Media</string>
+    <string name="app_label">Không gian nhớ của Media</string>
+    <string name="artist_label">Nghệ sĩ</string>
+    <string name="ringtone_default">Nhạc chuông mặc định</string>
+    <string name="notification_sound_default">Âm báo mặc định</string>
+    <string name="alarm_sound_default">Âm thanh báo thức mặc định</string>
+    <string name="root_images">Hình ảnh</string>
+    <string name="root_videos">Video</string>
+    <string name="root_audio">Âm thanh</string>
+    <string name="drm_licensed_message">Không thể đặt cài nội dung được bảo vệ bởi DRM làm nhạc chuông hoặc thông báo.</string>
+    <string name="alert_sound">Âm cảnh báo</string>
+    <string name="alert_sound_default">Âm cảnh báo mặc định</string>
+    <string name="done">H.tất</string>
+    <string name="add_ringtone">Thêm từ bộ nhớ thiết bị</string>
+    <string name="unable_to_play_during_call">Không thể phát khi đang gọi.</string>
+    <string name="ok">OK</string>
+    <string name="noti_mbody_to_use_ps">Không thể sử dụng %s</string>
+    <string name="noti_sbody_to_use_ps">Để sử dụng %s, hãy chạm CÀI ĐẶT, đi đến Thông tin ứng dụng > Quyền, rồi cho phép các quyền sau đây:</string>
+    <string name="noti_button_settings">Cài đặt</string>
+    <string name="upgrade_msg">Đang nâng cấp cơ sở dữ liệu Phương tiện.</string>
+</resources>
