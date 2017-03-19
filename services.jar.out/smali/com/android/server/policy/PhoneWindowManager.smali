@@ -8525,7 +8525,7 @@
     :cond_0
     iget-object v6, p0, Lcom/android/server/policy/PhoneWindowManager;->mKeyguardDelegate:Lcom/android/server/policy/keyguard/KeyguardServiceDelegate;
 
-    invoke-virtual {v6, v5, p2}, Lcom/android/server/policy/keyguard/KeyguardServiceDelegate;->setOccluded(ZI)V
+    invoke-virtual {v6, v5}, Lcom/android/server/policy/keyguard/KeyguardServiceDelegate;->setOccluded(Z)V
 
     invoke-interface {v1}, Landroid/view/WindowManagerPolicy$WindowState;->getAttrs()Landroid/view/WindowManager$LayoutParams;
 
@@ -8606,7 +8606,7 @@
     :cond_2
     iget-object v5, p0, Lcom/android/server/policy/PhoneWindowManager;->mKeyguardDelegate:Lcom/android/server/policy/keyguard/KeyguardServiceDelegate;
 
-    invoke-virtual {v5, v4, p2}, Lcom/android/server/policy/keyguard/KeyguardServiceDelegate;->setOccluded(ZI)V
+    invoke-virtual {v5, v4}, Lcom/android/server/policy/keyguard/KeyguardServiceDelegate;->setOccluded(Z)V
 
     invoke-interface {v1}, Landroid/view/WindowManagerPolicy$WindowState;->getAttrs()Landroid/view/WindowManager$LayoutParams;
 
@@ -8698,7 +8698,7 @@
     :cond_4
     iget-object v4, p0, Lcom/android/server/policy/PhoneWindowManager;->mKeyguardDelegate:Lcom/android/server/policy/keyguard/KeyguardServiceDelegate;
 
-    invoke-virtual {v4, v5, p2}, Lcom/android/server/policy/keyguard/KeyguardServiceDelegate;->setOccluded(ZI)V
+    invoke-virtual {v4, v5}, Lcom/android/server/policy/keyguard/KeyguardServiceDelegate;->setOccluded(Z)V
 
     :cond_5
     move v4, v5
@@ -20096,18 +20096,468 @@
 .end method
 
 .method public finishPostLayoutPolicyLw()I
-    .locals 2
+    .locals 12
 
     .prologue
+    const/16 v11, 0xf
+
+    const/4 v5, 0x0
+
+    const/4 v7, 0x0
+
+    const/4 v6, 0x1
+
+    iget-object v8, p0, Lcom/android/server/policy/PhoneWindowManager;->mWinShowWhenLocked:Landroid/view/WindowManagerPolicy$WindowState;
+
+    if-eqz v8, :cond_0
+
+    iget-object v8, p0, Lcom/android/server/policy/PhoneWindowManager;->mTopFullscreenOpaqueWindowState:Landroid/view/WindowManagerPolicy$WindowState;
+
+    if-eqz v8, :cond_0
+
+    iget-object v8, p0, Lcom/android/server/policy/PhoneWindowManager;->mWinShowWhenLocked:Landroid/view/WindowManagerPolicy$WindowState;
+
+    invoke-interface {v8}, Landroid/view/WindowManagerPolicy$WindowState;->getAppToken()Landroid/view/IApplicationToken;
+
+    move-result-object v8
+
+    iget-object v9, p0, Lcom/android/server/policy/PhoneWindowManager;->mTopFullscreenOpaqueWindowState:Landroid/view/WindowManagerPolicy$WindowState;
+
+    invoke-interface {v9}, Landroid/view/WindowManagerPolicy$WindowState;->getAppToken()Landroid/view/IApplicationToken;
+
+    move-result-object v9
+
+    if-eq v8, v9, :cond_0
+
+    invoke-virtual {p0}, Lcom/android/server/policy/PhoneWindowManager;->isKeyguardLocked()Z
+
+    move-result v8
+
+    if-eqz v8, :cond_0
+
+    iget-object v8, p0, Lcom/android/server/policy/PhoneWindowManager;->mWinShowWhenLocked:Landroid/view/WindowManagerPolicy$WindowState;
+
+    invoke-interface {v8}, Landroid/view/WindowManagerPolicy$WindowState;->getAttrs()Landroid/view/WindowManager$LayoutParams;
+
+    move-result-object v8
+
+    iget v9, v8, Landroid/view/WindowManager$LayoutParams;->flags:I
+
+    const/high16 v10, 0x100000
+
+    or-int/2addr v9, v10
+
+    iput v9, v8, Landroid/view/WindowManager$LayoutParams;->flags:I
+
+    iget-object v8, p0, Lcom/android/server/policy/PhoneWindowManager;->mTopFullscreenOpaqueWindowState:Landroid/view/WindowManagerPolicy$WindowState;
+
+    invoke-interface {v8, v7}, Landroid/view/WindowManagerPolicy$WindowState;->hideLw(Z)Z
+
+    iget-object v8, p0, Lcom/android/server/policy/PhoneWindowManager;->mWinShowWhenLocked:Landroid/view/WindowManagerPolicy$WindowState;
+
+    iput-object v8, p0, Lcom/android/server/policy/PhoneWindowManager;->mTopFullscreenOpaqueWindowState:Landroid/view/WindowManagerPolicy$WindowState;
+
+    :cond_0
     const/4 v0, 0x0
 
-    const/4 v1, 0x1
+    .local v0, "changes":I
+    const/4 v4, 0x0
 
-    invoke-virtual {p0, v0, v1}, Lcom/android/server/policy/PhoneWindowManager;->finishPostLayoutPolicyLw(IZ)I
+    .local v4, "topIsFullscreen":Z
+    iget-object v8, p0, Lcom/android/server/policy/PhoneWindowManager;->mTopFullscreenOpaqueWindowState:Landroid/view/WindowManagerPolicy$WindowState;
 
-    move-result v0
+    if-eqz v8, :cond_b
+
+    iget-object v8, p0, Lcom/android/server/policy/PhoneWindowManager;->mTopFullscreenOpaqueWindowState:Landroid/view/WindowManagerPolicy$WindowState;
+
+    invoke-interface {v8}, Landroid/view/WindowManagerPolicy$WindowState;->getAttrs()Landroid/view/WindowManager$LayoutParams;
+
+    move-result-object v2
+
+    .local v2, "lp":Landroid/view/WindowManager$LayoutParams;
+    :goto_0
+    iget-boolean v8, p0, Lcom/android/server/policy/PhoneWindowManager;->mShowingDream:Z
+
+    if-nez v8, :cond_c
+
+    iget-boolean v8, p0, Lcom/android/server/policy/PhoneWindowManager;->mShowingLockscreen:Z
+
+    iput-boolean v8, p0, Lcom/android/server/policy/PhoneWindowManager;->mDreamingLockscreen:Z
+
+    iget-boolean v8, p0, Lcom/android/server/policy/PhoneWindowManager;->mDreamingSleepTokenNeeded:Z
+
+    if-eqz v8, :cond_1
+
+    iput-boolean v7, p0, Lcom/android/server/policy/PhoneWindowManager;->mDreamingSleepTokenNeeded:Z
+
+    iget-object v8, p0, Lcom/android/server/policy/PhoneWindowManager;->mHandler:Landroid/os/Handler;
+
+    invoke-virtual {v8, v11, v7, v6}, Landroid/os/Handler;->obtainMessage(III)Landroid/os/Message;
+
+    move-result-object v8
+
+    invoke-virtual {v8}, Landroid/os/Message;->sendToTarget()V
+
+    :cond_1
+    :goto_1
+    iget-object v8, p0, Lcom/android/server/policy/PhoneWindowManager;->mStatusBar:Landroid/view/WindowManagerPolicy$WindowState;
+
+    if-eqz v8, :cond_5
+
+    iget-boolean v8, p0, Lcom/android/server/policy/PhoneWindowManager;->mForceStatusBarTransparent:Z
+
+    if-eqz v8, :cond_d
+
+    iget-boolean v8, p0, Lcom/android/server/policy/PhoneWindowManager;->mForceStatusBar:Z
+
+    if-nez v8, :cond_d
+
+    iget-boolean v8, p0, Lcom/android/server/policy/PhoneWindowManager;->mForceStatusBarFromKeyguard:Z
+
+    if-nez v8, :cond_d
+
+    move v3, v6
+
+    .local v3, "shouldBeTransparent":Z
+    :goto_2
+    if-nez v3, :cond_e
+
+    iget-object v8, p0, Lcom/android/server/policy/PhoneWindowManager;->mStatusBarController:Lcom/android/server/policy/StatusBarController;
+
+    invoke-virtual {v8, v7}, Lcom/android/server/policy/StatusBarController;->setShowTransparent(Z)V
+
+    :cond_2
+    :goto_3
+    iget-boolean v8, p0, Lcom/android/server/policy/PhoneWindowManager;->mForceStatusBar:Z
+
+    if-nez v8, :cond_3
+
+    iget-boolean v8, p0, Lcom/android/server/policy/PhoneWindowManager;->mForceStatusBarFromKeyguard:Z
+
+    if-nez v8, :cond_3
+
+    iget-boolean v8, p0, Lcom/android/server/policy/PhoneWindowManager;->mForceStatusBarTransparent:Z
+
+    if-eqz v8, :cond_10
+
+    :cond_3
+    iget-object v8, p0, Lcom/android/server/policy/PhoneWindowManager;->mStatusBarController:Lcom/android/server/policy/StatusBarController;
+
+    invoke-virtual {v8, v6}, Lcom/android/server/policy/StatusBarController;->setBarShowingLw(Z)Z
+
+    move-result v8
+
+    if-eqz v8, :cond_4
+
+    or-int/lit8 v0, v0, 0x1
+
+    :cond_4
+    iget-boolean v8, p0, Lcom/android/server/policy/PhoneWindowManager;->mTopIsFullscreen:Z
+
+    if-eqz v8, :cond_f
+
+    iget-object v8, p0, Lcom/android/server/policy/PhoneWindowManager;->mStatusBar:Landroid/view/WindowManagerPolicy$WindowState;
+
+    invoke-interface {v8}, Landroid/view/WindowManagerPolicy$WindowState;->isAnimatingLw()Z
+
+    move-result v8
+
+    if-eqz v8, :cond_f
+
+    move v4, v6
+
+    :goto_4
+    iget-boolean v8, p0, Lcom/android/server/policy/PhoneWindowManager;->mForceStatusBarFromKeyguard:Z
+
+    if-eqz v8, :cond_5
+
+    iget-object v8, p0, Lcom/android/server/policy/PhoneWindowManager;->mStatusBarController:Lcom/android/server/policy/StatusBarController;
+
+    invoke-virtual {v8}, Lcom/android/server/policy/StatusBarController;->isTransientShowing()Z
+
+    move-result v8
+
+    if-eqz v8, :cond_5
+
+    iget-object v8, p0, Lcom/android/server/policy/PhoneWindowManager;->mStatusBarController:Lcom/android/server/policy/StatusBarController;
+
+    iget v9, p0, Lcom/android/server/policy/PhoneWindowManager;->mLastSystemUiFlags:I
+
+    iget v10, p0, Lcom/android/server/policy/PhoneWindowManager;->mLastSystemUiFlags:I
+
+    invoke-virtual {v8, v7, v9, v10}, Lcom/android/server/policy/StatusBarController;->updateVisibilityLw(ZII)I
+
+    .end local v3    # "shouldBeTransparent":Z
+    :cond_5
+    :goto_5
+    iget-boolean v8, p0, Lcom/android/server/policy/PhoneWindowManager;->mTopIsFullscreen:Z
+
+    if-eq v8, v4, :cond_7
+
+    if-nez v4, :cond_6
+
+    or-int/lit8 v0, v0, 0x1
+
+    :cond_6
+    iput-boolean v4, p0, Lcom/android/server/policy/PhoneWindowManager;->mTopIsFullscreen:Z
+
+    :cond_7
+    iget-object v8, p0, Lcom/android/server/policy/PhoneWindowManager;->mKeyguardDelegate:Lcom/android/server/policy/keyguard/KeyguardServiceDelegate;
+
+    if-eqz v8, :cond_9
+
+    iget-object v8, p0, Lcom/android/server/policy/PhoneWindowManager;->mStatusBar:Landroid/view/WindowManagerPolicy$WindowState;
+
+    if-eqz v8, :cond_9
+
+    iget v8, p0, Lcom/android/server/policy/PhoneWindowManager;->mDismissKeyguard:I
+
+    if-eqz v8, :cond_15
+
+    iget-boolean v8, p0, Lcom/android/server/policy/PhoneWindowManager;->mKeyguardSecure:Z
+
+    if-nez v8, :cond_15
+
+    iput-boolean v6, p0, Lcom/android/server/policy/PhoneWindowManager;->mKeyguardHidden:Z
+
+    invoke-direct {p0, v6}, Lcom/android/server/policy/PhoneWindowManager;->setKeyguardOccludedLw(Z)Z
+
+    move-result v5
+
+    if-eqz v5, :cond_8
+
+    or-int/lit8 v0, v0, 0x7
+
+    :cond_8
+    iget-object v5, p0, Lcom/android/server/policy/PhoneWindowManager;->mKeyguardDelegate:Lcom/android/server/policy/keyguard/KeyguardServiceDelegate;
+
+    invoke-virtual {v5}, Lcom/android/server/policy/keyguard/KeyguardServiceDelegate;->isShowing()Z
+
+    move-result v5
+
+    if-eqz v5, :cond_9
+
+    iget-object v5, p0, Lcom/android/server/policy/PhoneWindowManager;->mHandler:Landroid/os/Handler;
+
+    new-instance v6, Lcom/android/server/policy/PhoneWindowManager$18;
+
+    invoke-direct {v6, p0}, Lcom/android/server/policy/PhoneWindowManager$18;-><init>(Lcom/android/server/policy/PhoneWindowManager;)V
+
+    invoke-virtual {v5, v6}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
+
+    :cond_9
+    :goto_6
+    invoke-direct {p0}, Lcom/android/server/policy/PhoneWindowManager;->updateSystemUiVisibilityLw()I
+
+    move-result v5
+
+    const v6, -0x3fff7ffa
+
+    and-int/2addr v5, v6
+
+    if-eqz v5, :cond_a
+
+    or-int/lit8 v0, v0, 0x1
+
+    :cond_a
+    invoke-direct {p0}, Lcom/android/server/policy/PhoneWindowManager;->updateLockScreenTimeout()V
 
     return v0
+
+    .end local v2    # "lp":Landroid/view/WindowManager$LayoutParams;
+    :cond_b
+    move-object v2, v5
+
+    goto/16 :goto_0
+
+    .restart local v2    # "lp":Landroid/view/WindowManager$LayoutParams;
+    :cond_c
+    iget-boolean v8, p0, Lcom/android/server/policy/PhoneWindowManager;->mDreamingSleepTokenNeeded:Z
+
+    if-nez v8, :cond_1
+
+    iput-boolean v6, p0, Lcom/android/server/policy/PhoneWindowManager;->mDreamingSleepTokenNeeded:Z
+
+    iget-object v8, p0, Lcom/android/server/policy/PhoneWindowManager;->mHandler:Landroid/os/Handler;
+
+    invoke-virtual {v8, v11, v6, v6}, Landroid/os/Handler;->obtainMessage(III)Landroid/os/Message;
+
+    move-result-object v8
+
+    invoke-virtual {v8}, Landroid/os/Message;->sendToTarget()V
+
+    goto/16 :goto_1
+
+    :cond_d
+    move v3, v7
+
+    goto/16 :goto_2
+
+    .restart local v3    # "shouldBeTransparent":Z
+    :cond_e
+    iget-object v8, p0, Lcom/android/server/policy/PhoneWindowManager;->mStatusBar:Landroid/view/WindowManagerPolicy$WindowState;
+
+    invoke-interface {v8}, Landroid/view/WindowManagerPolicy$WindowState;->isVisibleLw()Z
+
+    move-result v8
+
+    if-nez v8, :cond_2
+
+    iget-object v8, p0, Lcom/android/server/policy/PhoneWindowManager;->mStatusBarController:Lcom/android/server/policy/StatusBarController;
+
+    invoke-virtual {v8, v6}, Lcom/android/server/policy/StatusBarController;->setShowTransparent(Z)V
+
+    goto/16 :goto_3
+
+    :cond_f
+    move v4, v7
+
+    goto/16 :goto_4
+
+    :cond_10
+    iget-object v8, p0, Lcom/android/server/policy/PhoneWindowManager;->mTopFullscreenOpaqueWindowState:Landroid/view/WindowManagerPolicy$WindowState;
+
+    if-eqz v8, :cond_5
+
+    invoke-static {v5, v2}, Lcom/android/server/policy/PolicyControl;->getWindowFlags(Landroid/view/WindowManagerPolicy$WindowState;Landroid/view/WindowManager$LayoutParams;)I
+
+    move-result v1
+
+    .local v1, "fl":I
+    and-int/lit16 v8, v1, 0x400
+
+    if-nez v8, :cond_11
+
+    iget v8, p0, Lcom/android/server/policy/PhoneWindowManager;->mLastSystemUiFlags:I
+
+    and-int/lit8 v8, v8, 0x4
+
+    if-eqz v8, :cond_12
+
+    :cond_11
+    move v4, v6
+
+    :goto_7
+    iget-object v8, p0, Lcom/android/server/policy/PhoneWindowManager;->mStatusBarController:Lcom/android/server/policy/StatusBarController;
+
+    invoke-virtual {v8}, Lcom/android/server/policy/StatusBarController;->isTransientShowing()Z
+
+    move-result v8
+
+    if-eqz v8, :cond_13
+
+    iget-object v8, p0, Lcom/android/server/policy/PhoneWindowManager;->mStatusBarController:Lcom/android/server/policy/StatusBarController;
+
+    invoke-virtual {v8, v6}, Lcom/android/server/policy/StatusBarController;->setBarShowingLw(Z)Z
+
+    move-result v8
+
+    if-eqz v8, :cond_5
+
+    or-int/lit8 v0, v0, 0x1
+
+    goto/16 :goto_5
+
+    :cond_12
+    move v4, v7
+
+    goto :goto_7
+
+    :cond_13
+    if-eqz v4, :cond_14
+
+    iget-object v8, p0, Lcom/android/server/policy/PhoneWindowManager;->mStatusBarController:Lcom/android/server/policy/StatusBarController;
+
+    invoke-virtual {v8, v7}, Lcom/android/server/policy/StatusBarController;->setBarShowingLw(Z)Z
+
+    move-result v8
+
+    if-eqz v8, :cond_5
+
+    or-int/lit8 v0, v0, 0x1
+
+    goto/16 :goto_5
+
+    :cond_14
+    iget-object v8, p0, Lcom/android/server/policy/PhoneWindowManager;->mStatusBarController:Lcom/android/server/policy/StatusBarController;
+
+    invoke-virtual {v8, v6}, Lcom/android/server/policy/StatusBarController;->setBarShowingLw(Z)Z
+
+    move-result v8
+
+    if-eqz v8, :cond_5
+
+    or-int/lit8 v0, v0, 0x1
+
+    goto/16 :goto_5
+
+    .end local v1    # "fl":I
+    .end local v3    # "shouldBeTransparent":Z
+    :cond_15
+    iget-boolean v8, p0, Lcom/android/server/policy/PhoneWindowManager;->mHideLockScreen:Z
+
+    if-eqz v8, :cond_16
+
+    iput-boolean v6, p0, Lcom/android/server/policy/PhoneWindowManager;->mKeyguardHidden:Z
+
+    iput-object v5, p0, Lcom/android/server/policy/PhoneWindowManager;->mWinDismissingKeyguard:Landroid/view/WindowManagerPolicy$WindowState;
+
+    invoke-direct {p0, v6}, Lcom/android/server/policy/PhoneWindowManager;->setKeyguardOccludedLw(Z)Z
+
+    move-result v5
+
+    if-eqz v5, :cond_9
+
+    or-int/lit8 v0, v0, 0x7
+
+    goto/16 :goto_6
+
+    :cond_16
+    iget v8, p0, Lcom/android/server/policy/PhoneWindowManager;->mDismissKeyguard:I
+
+    if-eqz v8, :cond_18
+
+    iput-boolean v7, p0, Lcom/android/server/policy/PhoneWindowManager;->mKeyguardHidden:Z
+
+    invoke-direct {p0, v7}, Lcom/android/server/policy/PhoneWindowManager;->setKeyguardOccludedLw(Z)Z
+
+    move-result v5
+
+    if-eqz v5, :cond_17
+
+    or-int/lit8 v0, v0, 0x7
+
+    :cond_17
+    iget v5, p0, Lcom/android/server/policy/PhoneWindowManager;->mDismissKeyguard:I
+
+    if-ne v5, v6, :cond_9
+
+    iget-object v5, p0, Lcom/android/server/policy/PhoneWindowManager;->mHandler:Landroid/os/Handler;
+
+    new-instance v6, Lcom/android/server/policy/PhoneWindowManager$19;
+
+    invoke-direct {v6, p0}, Lcom/android/server/policy/PhoneWindowManager$19;-><init>(Lcom/android/server/policy/PhoneWindowManager;)V
+
+    invoke-virtual {v5, v6}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
+
+    goto/16 :goto_6
+
+    :cond_18
+    iput-object v5, p0, Lcom/android/server/policy/PhoneWindowManager;->mWinDismissingKeyguard:Landroid/view/WindowManagerPolicy$WindowState;
+
+    iput-boolean v7, p0, Lcom/android/server/policy/PhoneWindowManager;->mSecureDismissingKeyguard:Z
+
+    iput-boolean v7, p0, Lcom/android/server/policy/PhoneWindowManager;->mKeyguardHidden:Z
+
+    invoke-direct {p0, v7}, Lcom/android/server/policy/PhoneWindowManager;->setKeyguardOccludedLw(Z)Z
+
+    move-result v5
+
+    if-eqz v5, :cond_9
+
+    or-int/lit8 v0, v0, 0x7
+
+    goto/16 :goto_6
 .end method
 
 .method public finishPostLayoutPolicyLw(IZ)I
