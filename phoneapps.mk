@@ -10,7 +10,7 @@ local-phone-apps := NfcNci SPrintSpooler6 PacProcessor CertInstaller KeyChain mc
 	ImsSettings ImsTelephonyService
 
 
-local-phone-priv-apps := Shell ProxyHandler HealthService ExternalStorageProvider \
+local-phone-priv-apps := Shell ProxyHandler ContextProvider ExternalStorageProvider \
 	SharedStorageBackup InputDevices BackupRestoreConfirmation NSFusedLocation_Global SimSettingMgr \
 	MtpApplication SecSettingsProvider2 SecMediaProvider ShootingModeProvider Alipay_Service AODService \
 	FingerprintService2 OfflineNetworkLocation_Baidu
