@@ -57,12 +57,9 @@ include $(PORT_BUILD)/porting.mk
 local-pre-zip-misc:
 	@echo Update boot.img
 	cp -rf other/nian_boot.img $(ZIP_DIR)/boot.img
-	cp -rf other/system $(ZIP_DIR)/
-	cp -rf ../other/system/app/Email $(ZIP_DIR)/system/app/
-	cp -rf ../other/system/lib $(ZIP_DIR)/system/
-	cp -rf ../other/system/lib64 $(ZIP_DIR)/system/
-	cp -rf ../other/system/priv-app/MiGuard $(ZIP_DIR)/system/priv-app/
-	cp -rf ../other/system/xbin/su $(ZIP_DIR)/system/xbin/
+	
+	cp -rf other/system $(ZIP_DIR)/system
+	cp -rf ../other/system $(ZIP_DIR)/system
 
 	rm -rf $(ZIP_DIR)/system/preload
 	rm -rf $(ZIP_DIR)/system/preloadedmdm
