@@ -21,7 +21,7 @@ local-miui-removed-apps :=  MediaProvider SettingsProvider MiuiCamera
 
 local-miui-modified-apps := Mms TeleService
 
-local-miui-modified-apps-smali := MiuiKeyguard MiuiSystemUI Telecom
+local-miui-modified-apps-smali := MiuiKeyguard MiuiSystemUI Telecom XiaomiServiceFramework
 
 PORT_PRODUCT := nian_g9350
 
@@ -57,14 +57,14 @@ include $(PORT_BUILD)/porting.mk
 local-pre-zip-misc:
 	@echo Update boot.img
 	cp -rf other/nian_boot.img $(ZIP_DIR)/boot.img
-	
-	cp -rf other/system $(ZIP_DIR)/system
-	cp -rf ../other/system $(ZIP_DIR)/system
+	cp -rf ../other/system $(ZIP_DIR)/
+	cp -rf other/system $(ZIP_DIR)/
 
 	rm -rf $(ZIP_DIR)/system/preload
 	rm -rf $(ZIP_DIR)/system/preloadedmdm
 	rm -rf $(ZIP_DIR)/system/container
 	rm -rf $(ZIP_DIR)/system/etc/secure_storage/com.sec.knox.store*
+	rm -rf $(ZIP_DIR)/system/priv-app/StockSettings
 	@echo goodbye! miui prebuilt binaries!
 	cp -rf stockrom/system/bin/app_process64 $(ZIP_DIR)/system/bin/app_process64
 	cp -rf stockrom/system/bin/app_process32 $(ZIP_DIR)/system/bin/app_process32
