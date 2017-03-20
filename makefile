@@ -19,7 +19,7 @@ local-modified-jars := sec_sdp_hidden_sdk
 # All apks from MIUI
 local-miui-removed-apps :=  MediaProvider SettingsProvider MiuiCamera
 
-local-miui-modified-apps := Mms TeleService
+local-miui-modified-apps := InCallUI Mms TeleService
 
 local-miui-modified-apps-smali := MiuiKeyguard MiuiSystemUI Telecom XiaomiServiceFramework
 

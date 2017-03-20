@@ -43,3 +43,8 @@ if [ $1 = "TeleService" ];then
     applyPatch $1 $2
     appendSmaliPart "TeleService"
 fi
+
+if [ $1 = "InCallUI" ];then
+    $XMLMERGYTOOL $1/res/values $2/res/values
+    applyPatch $1 $2
+fi
