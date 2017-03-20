@@ -1,3 +1,7 @@
+.method public onStartedWakingUpWithReason(I)V
+    .locals 0
+    return-void
+.end method
 
 .method public setOccluded(ZI)V
     .locals 0
