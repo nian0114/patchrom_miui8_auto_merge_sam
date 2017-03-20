@@ -1,0 +1,144 @@
+From 9072fb4d5afd7f8979f9fb0579c92d2c9020d605 Mon Sep 17 00:00:00 2001
+From: wangtongli <276792882@qq.com>
+Date: Sat, 22 Oct 2016 01:46:43 +0800
+Subject: [PATCH] fix-ringtone-fc
+
+---
+ .../systemui/media/NotificationPlayer.smali        | 41 ++++++++++++++++++++++
+ .../android/systemui/media/RingtonePlayer$1.smali  | 39 ++++++++++++++++++++
+ .../android/systemui/statusbar/CommandQueue.smali  |  7 ++++
+ 3 files changed, 87 insertions(+)
+
+--- a/MiuiSystemUI/smali/com/android/systemui/media/NotificationPlayer.smali
++++ b/MiuiSystemUI/smali/com/android/systemui/media/NotificationPlayer.smali
+@@ -20,6 +20,8 @@
+ # instance fields
+ .field private mAudioManagerWithAudioFocus:Landroid/media/AudioManager;
+ 
++.field private mBinder:Landroid/os/IBinder;
++
+ .field private mCmdQueue:Ljava/util/LinkedList;
+     .annotation system Ldalvik/annotation/Signature;
+         value = {
+@@ -37,6 +39,17 @@
+ 
+ .field private mLooper:Landroid/os/Looper;
+ 
++.field private mOnCompletionListener:Ljava/util/Vector;
++    .annotation system Ldalvik/annotation/Signature;
++        value = {
++            "Ljava/util/Vector",
++            "<",
++            "Landroid/app/INotificationPlayerOnCompletionListener;",
++            ">;"
++        }
++    .end annotation
++.end field
++
+ .field private mPlayer:Landroid/media/MediaPlayer;
+ 
+ .field private final mQueueAudioFocusLock:Ljava/lang/Object;
+@@ -80,6 +93,18 @@
+ 
+     iput v0, p0, Lcom/android/systemui/media/NotificationPlayer;->mState:I
+ 
++    new-instance v0, Landroid/os/Binder;
++
++    invoke-direct {v0}, Landroid/os/Binder;-><init>()V
++
++    iput-object v0, p0, Lcom/android/systemui/media/NotificationPlayer;->mBinder:Landroid/os/IBinder;
++
++    new-instance v0, Ljava/util/Vector;
++
++    invoke-direct {v0}, Ljava/util/Vector;-><init>()V
++
++    iput-object v0, p0, Lcom/android/systemui/media/NotificationPlayer;->mOnCompletionListener:Ljava/util/Vector;
++
+     if-eqz p1, :cond_0
+ 
+     iput-object p1, p0, Lcom/android/systemui/media/NotificationPlayer;->mTag:Ljava/lang/String;
+@@ -617,6 +642,20 @@
+     throw v1
+ .end method
+ 
++.method public setOnCompletionListener(Landroid/app/INotificationPlayerOnCompletionListener;)Landroid/os/IBinder;
++    .locals 1
++    .param p1, "l"    # Landroid/app/INotificationPlayerOnCompletionListener;
++
++    .prologue
++    iget-object v0, p0, Lcom/android/systemui/media/NotificationPlayer;->mOnCompletionListener:Ljava/util/Vector;
++
++    invoke-virtual {v0, p1}, Ljava/util/Vector;->addElement(Ljava/lang/Object;)V
++
++    iget-object v0, p0, Lcom/android/systemui/media/NotificationPlayer;->mBinder:Landroid/os/IBinder;
++
++    return-object v0
++.end method
++
+ .method public setUsesWakeLock(Landroid/content/Context;)V
+     .locals 4
+     .param p1, "context"    # Landroid/content/Context;
+--- a/MiuiSystemUI/smali/com/android/systemui/media/RingtonePlayer$1.smali
++++ b/MiuiSystemUI/smali/com/android/systemui/media/RingtonePlayer$1.smali
+@@ -280,6 +280,42 @@
+     return-void
+ .end method
+ 
++.method public setOnCompletionListener(Landroid/app/INotificationPlayerOnCompletionListener;)Landroid/os/IBinder;
++    .locals 2
++    .param p1, "l"    # Landroid/app/INotificationPlayerOnCompletionListener;
++
++    .prologue
++    invoke-static {}, Landroid/os/Binder;->getCallingUid()I
++
++    move-result v0
++
++    const/16 v1, 0x3e8
++
++    if-eq v0, v1, :cond_0
++
++    new-instance v0, Ljava/lang/SecurityException;
++
++    const-string v1, "setOnCompletionListener only available from system UID."
++
++    invoke-direct {v0, v1}, Ljava/lang/SecurityException;-><init>(Ljava/lang/String;)V
++
++    throw v0
++
++    :cond_0
++    iget-object v0, p0, Lcom/android/systemui/media/RingtonePlayer$1;->this$0:Lcom/android/systemui/media/RingtonePlayer;
++
++    # getter for: Lcom/android/systemui/media/RingtonePlayer;->mAsyncPlayer:Lcom/android/systemui/media/NotificationPlayer;
++    invoke-static {v0}, Lcom/android/systemui/media/RingtonePlayer;->access$400(Lcom/android/systemui/media/RingtonePlayer;)Lcom/android/systemui/media/NotificationPlayer;
++
++    move-result-object v0
++
++    invoke-virtual {v0, p1}, Lcom/android/systemui/media/NotificationPlayer;->setOnCompletionListener(Landroid/app/INotificationPlayerOnCompletionListener;)Landroid/os/IBinder;
++
++    move-result-object v0
++
++    return-object v0
++.end method
++
+ .method public setPlaybackProperties(Landroid/os/IBinder;FZ)V
+     .locals 3
+     .param p1, "token"    # Landroid/os/IBinder;
+--- a/MiuiSystemUI/smali/com/android/systemui/statusbar/CommandQueue.smali
++++ b/MiuiSystemUI/smali/com/android/systemui/statusbar/CommandQueue.smali
+@@ -707,6 +707,13 @@
+     return-void
+ .end method
+ 
++.method public setMultiWindowBg(Z)V
++    .locals 0
++
++    .prologue
++    return-void
++.end method
++
+ .method public setNavigationIconHints(I)V
+     .locals 5
+     .param p1, "hints"    # I
+-- 
+1.9.1
+
