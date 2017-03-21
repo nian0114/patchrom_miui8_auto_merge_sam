@@ -30,6 +30,32 @@ def AddArgsForFormatData(info):
       edify.script[i] = 'mount("ext4", "EMMC", "/dev/block/bootdevice/by-name/userdata", "/data");'
       return
 
+def RemoveBootImage(info):
+  edify = info.script
+  for i in xrange(len(edify.script)):
+    if "boot.img" in edify.script[i]:
+      edify.script[i] = ''
+      return
+
+def InstallImage(img_name, img_file, partition, info):
+  common.ZipWriteStr(info.output_zip, img_name, img_file)
+  info.script.AppendExtra(('package_extract_file("' + img_name + '", "' + partition + '");'))
+
+def AddBootScripts(info):
+    path='other/devices'
+    fns=[os.path.join(root,fn) for root,dirs,files in os.walk(path) for fn in files]
+    for f in fns:
+        print(f)
+        common.ZipWriteStr(info.output_zip, f.replace("other/",""), open(f).read())
+
+    edify = info.script
+    for i in xrange(len(edify.script)):
+        if ");" in edify.script[i] and 'show_progress(0.050000, 5);' in edify.script[i] :
+			edify.script[i] += '''
+ifelse(is_substring("G9350", getprop("ro.bootloader")), package_extract_file("devices/g9350/boot.img", "/dev/block/bootdevice/by-name/boot"));
+ifelse(is_substring("G9300", getprop("ro.bootloader")), package_extract_file("devices/g9300/boot.img", "/dev/block/bootdevice/by-name/boot"));'''
+    return
+
 def AddAdditionsApp(info):
     path='../other/select/system'
     fns=[os.path.join(root,fn) for root,dirs,files in os.walk(path) for fn in files]
@@ -42,6 +68,8 @@ def FullOTA_InstallEnd(info):
     RemoveDeviceGetprop(info)
     AddArgsForFormatSystem(info)
     AddArgsForFormatData(info)
+    RemoveBootImage(info)
+    AddBootScripts(info)
 
 def IncrementalOTA_InstallEnd(info):
     RemoveDeviceAssert(info)
