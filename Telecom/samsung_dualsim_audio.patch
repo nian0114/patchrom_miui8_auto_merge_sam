@@ -1,0 +1,85 @@
+From a566edcaa0860eca27d018f9312b5d74cd8d2473 Mon Sep 17 00:00:00 2001
+From: nian0114 <268078545@qq.com>
+Date: Tue, 21 Mar 2017 03:38:44 +0800
+Subject: [PATCH] fix samsung dual phone
+
+---
+ Telecom/smali/com/android/server/telecom/Call.smali   |  2 +-
+ .../android/server/telecom/CallAudioManager$1.smali   |  4 ++--
+ .../com/android/server/telecom/CallAudioManager.smali | 19 +++++++++++++++++++
+ .../com/android/server/telecom/TelecomSystem.smali    |  9 +++++++++
+ 4 files changed, 31 insertions(+), 3 deletions(-)
+
+--- a/Telecom/smali/com/android/server/telecom/Call.smali
++++ b/Telecom/smali/com/android/server/telecom/Call.smali
+@@ -1916,7 +1916,7 @@
+     return-object v0
+ .end method
+ 
+-.method getTargetPhoneAccount()Landroid/telecom/PhoneAccountHandle;
++.method public getTargetPhoneAccount()Landroid/telecom/PhoneAccountHandle;
+     .locals 1
+ 
+     .prologue
+--- a/Telecom/smali/com/android/server/telecom/CallAudioManager$1.smali
++++ b/Telecom/smali/com/android/server/telecom/CallAudioManager$1.smali
+@@ -249,9 +249,9 @@
+     invoke-virtual {v5, v7}, Landroid/media/AudioManager;->setMode(I)V
+ 
+     :cond_4
+-    iget-object v5, p0, Lcom/android/server/telecom/CallAudioManager$1;->mAudioManager:Landroid/media/AudioManager;
++    iget-object v5, p0, Lcom/android/server/telecom/CallAudioManager$1;->this$0:Lcom/android/server/telecom/CallAudioManager;
+ 
+-    invoke-virtual {v5, v1}, Landroid/media/AudioManager;->setMode(I)V
++    invoke-static {v5, v1}, Lcom/android/server/telecom/CallAudioManager;->access$999(Lcom/android/server/telecom/CallAudioManager;I)V
+ 
+     iget-object v5, p0, Lcom/android/server/telecom/CallAudioManager$1;->this$0:Lcom/android/server/telecom/CallAudioManager;
+ 
+--- a/Telecom/smali/com/android/server/telecom/CallAudioManager.smali
++++ b/Telecom/smali/com/android/server/telecom/CallAudioManager.smali
+@@ -66,6 +66,25 @@
+ 
+     iput-object v0, p0, Lcom/android/server/telecom/CallAudioManager;->mAudioManagerHandler:Landroid/os/Handler;
+ 
++    const-string v0, "audio"
++
++    invoke-virtual {p1, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
++
++    move-result-object v0
++
++    check-cast v0, Landroid/media/AudioManager;
++
++    iput-object v0, p0, Lcom/android/server/telecom/CallAudioManager;->mAudioManager:Landroid/media/AudioManager;
++
++    new-instance v0, Lcom/android/server/telecom/CallAudioManager$AudioParamForCallState;
++
++    iget-object v1, p0, Lcom/android/server/telecom/CallAudioManager;->mAudioManager:Landroid/media/AudioManager;
++
++    invoke-direct {v0, p0, v1}, Lcom/android/server/telecom/CallAudioManager$AudioParamForCallState;-><init>(Lcom/android/server/telecom/CallAudioManager;Landroid/media/AudioManager;)V
++
++    iput-object v0, p0, Lcom/android/server/telecom/CallAudioManager;->mAudioParamForCallState:Lcom/android/server/telecom/CallAudioManager$AudioParamForCallState;
++
++
+     const/4 v0, 0x2
+ 
+     iput v0, p0, Lcom/android/server/telecom/CallAudioManager;->mMostRecentlyUsedMode:I
+--- a/Telecom/smali/com/android/server/telecom/TelecomSystem.smali
++++ b/Telecom/smali/com/android/server/telecom/TelecomSystem.smali
+@@ -93,6 +93,14 @@
+ 
+     iput-object v0, p0, Lcom/android/server/telecom/TelecomSystem;->mContext:Landroid/content/Context;
+ 
++    iget-object v0, p0, Lcom/android/server/telecom/TelecomSystem;->mContext:Landroid/content/Context;
++
++    invoke-static {v0}, Lcom/android/server/telecom/TelecomFeature;->makeFeature(Landroid/content/Context;)V
++
++    iget-object v0, p0, Lcom/android/server/telecom/TelecomSystem;->mContext:Landroid/content/Context;
++
++    invoke-static {v0}, Lcom/android/server/telecom/TelecomSystemDB;->initialize(Landroid/content/Context;)V
++
+     iput-object p2, p0, Lcom/android/server/telecom/TelecomSystem;->mMissedCallNotifier:Lcom/android/server/telecom/MissedCallNotifier;
+ 
+     new-instance v0, Lcom/android/server/telecom/PhoneAccountRegistrar;
+-- 
+2.10.1
+

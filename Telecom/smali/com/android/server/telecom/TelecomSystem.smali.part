@@ -1,0 +1,10 @@
+
+.method public getContext()Landroid/content/Context;
+    .locals 1
+
+    .prologue
+    iget-object v0, p0, Lcom/android/server/telecom/TelecomSystem;->mContext:Landroid/content/Context;
+
+    return-object v0
+.end method
+

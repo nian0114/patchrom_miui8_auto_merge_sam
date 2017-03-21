@@ -49,7 +49,9 @@ if [ $1 = "MiuiSystemUI" ];then
 fi
 
 if [ $1 = "Telecom" ];then
-    applyPatch $1 $2
+	cp -rf $1/smali $2/
+    appendSmaliPart $1
+	applyPatch $1 $2
 fi
 
 if [ $1 = "XiaomiServiceFramework" ];then
