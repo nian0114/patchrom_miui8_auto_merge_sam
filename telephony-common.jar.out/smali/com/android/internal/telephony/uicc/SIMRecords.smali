@@ -1385,6 +1385,14 @@
 
     iput-object v5, p0, Lcom/android/internal/telephony/uicc/SIMRecords;->mAdnCache:Lcom/android/internal/telephony/uicc/AdnRecordCache;
 
+    new-instance v5, Lcom/android/internal/telephony/uicc/MiuiAdnRecordCache;
+
+    iget-object v6, p0, Lcom/android/internal/telephony/uicc/SIMRecords;->mFh:Lcom/android/internal/telephony/uicc/IccFileHandler;
+
+    invoke-direct {v5, v6}, Lcom/android/internal/telephony/uicc/MiuiAdnRecordCache;-><init>(Lcom/android/internal/telephony/uicc/IccFileHandler;)V
+
+    iput-object v5, p0, Lcom/android/internal/telephony/uicc/SIMRecords;->mMiuiAdnCache:Lcom/android/internal/telephony/uicc/MiuiAdnRecordCache;
+
     new-instance v5, Lcom/android/internal/telephony/uicc/VoiceMailConstants;
 
     invoke-direct {v5}, Lcom/android/internal/telephony/uicc/VoiceMailConstants;-><init>()V
@@ -6775,6 +6783,10 @@
     sparse-switch p1, :sswitch_data_0
 
     invoke-virtual {p0}, Lcom/android/internal/telephony/uicc/SIMRecords;->onSimPhonebookRefresh()V
+
+    iget-object v0, p0, Lcom/android/internal/telephony/uicc/SIMRecords;->mMiuiAdnCache:Lcom/android/internal/telephony/uicc/MiuiAdnRecordCache;
+
+    invoke-virtual {v0}, Lcom/android/internal/telephony/uicc/MiuiAdnRecordCache;->reset()V
 
     invoke-virtual {p0}, Lcom/android/internal/telephony/uicc/SIMRecords;->fetchSimRecords()V
 
@@ -16221,7 +16233,7 @@
 
     move-object/from16 v0, v17
 
-    invoke-static {v0, v4, v6}, Lcom/android/internal/telephony/uicc/IccUtils;->bcdToString([BII)Ljava/lang/String;
+    invoke-static {v0, v4, v6}, Lmiui/telephony/IccUtils;->parseIccIdToString([BII)Ljava/lang/String;
 
     move-result-object v4
 
@@ -16669,7 +16681,7 @@
 
     move-object/from16 v0, v17
 
-    invoke-static {v0, v4, v6}, Lcom/android/internal/telephony/uicc/IccUtils;->bcdToString([BII)Ljava/lang/String;
+    invoke-static {v0, v4, v6}, Lmiui/telephony/IccUtils;->parseIccIdToString([BII)Ljava/lang/String;
 
     move-result-object v4
 
@@ -22805,7 +22817,7 @@
 
     move-object/from16 v0, v17
 
-    invoke-static {v0, v6, v7}, Lcom/android/internal/telephony/uicc/IccUtils;->bcdToString([BII)Ljava/lang/String;
+    invoke-static {v0, v6, v7}, Lmiui/telephony/IccUtils;->parseIccIdToString([BII)Ljava/lang/String;
 
     move-result-object v6
 
@@ -22931,7 +22943,7 @@
 
     move-object/from16 v0, v17
 
-    invoke-static {v0, v8, v9}, Lcom/android/internal/telephony/uicc/IccUtils;->bcdToString([BII)Ljava/lang/String;
+    invoke-static {v0, v8, v9}, Lmiui/telephony/IccUtils;->parseIccIdToString([BII)Ljava/lang/String;
 
     move-result-object v8
 
@@ -23138,7 +23150,7 @@
 
     move-object/from16 v0, v17
 
-    invoke-static {v0, v8, v9}, Lcom/android/internal/telephony/uicc/IccUtils;->bcdToString([BII)Ljava/lang/String;
+    invoke-static {v0, v8, v9}, Lmiui/telephony/IccUtils;->parseIccIdToString([BII)Ljava/lang/String;
 
     move-result-object v8
 
@@ -23345,7 +23357,7 @@
 
     move-object/from16 v0, v17
 
-    invoke-static {v0, v8, v9}, Lcom/android/internal/telephony/uicc/IccUtils;->bcdToString([BII)Ljava/lang/String;
+    invoke-static {v0, v8, v9}, Lmiui/telephony/IccUtils;->parseIccIdToString([BII)Ljava/lang/String;
 
     move-result-object v8
 
@@ -27076,6 +27088,10 @@
     iget-object v1, p0, Lcom/android/internal/telephony/uicc/SIMRecords;->mAdnCache:Lcom/android/internal/telephony/uicc/AdnRecordCache;
 
     invoke-virtual {v1}, Lcom/android/internal/telephony/uicc/AdnRecordCache;->reset()V
+
+    iget-object v1, p0, Lcom/android/internal/telephony/uicc/SIMRecords;->mMiuiAdnCache:Lcom/android/internal/telephony/uicc/MiuiAdnRecordCache;
+
+    invoke-virtual {v1}, Lcom/android/internal/telephony/uicc/MiuiAdnRecordCache;->reset()V
 
     :cond_0
     iget-object v1, p0, Lcom/android/internal/telephony/uicc/SIMRecords;->phone:Lcom/android/internal/telephony/PhoneBase;
