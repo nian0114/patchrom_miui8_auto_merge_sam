@@ -52,5 +52,11 @@ if [ $2 = "$BUILD_OUT/services" ]
 then
     find $2/smali/com/android/server/pm/ -type f |xargs sed -i "s#iget-object \(v[0-9]*\), [pv][0-9]*, Lcom/android/server/pm/PackageManagerService;->mPackages:Landroid/util/ArrayMap;#sget-object \1, Lcom/android/server/pm/PackageManagerService;->mPackages:Landroid/util/ArrayMap;#g"
     applyPatch "overlay/services"
+    cp -rf overlay/backup/* $2/smali/com/android/server/backup/
     appendSmaliPart "services"
+fi
+
+if [ $2 = "$BUILD_OUT/wifi-service" ]
+then
+    applyPatch "overlay/wifi-service"
 fi
