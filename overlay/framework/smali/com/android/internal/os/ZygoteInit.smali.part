@@ -1551,53 +1551,53 @@
     .local v2, "Miro":Ljava/lang/StringBuilder;
     new-instance v12, Ljava/lang/StringBuilder;
 
-    const-string v13, "1d"
+    const-string v13, "089"
 
     invoke-direct {v12, v13}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    const-string v13, "b3c"
+    const-string v13, "c07"
 
     invoke-virtual {v12, v13}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v12
 
-    const-string v13, "2b8"
+    const-string v13, "7a4"
 
     invoke-virtual {v12, v13}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v12
 
-    const-string v13, "070"
+    const-string v13, "f3"
 
     invoke-virtual {v12, v13}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v12
 
-    const-string v13, "537cb"
+    const-string v13, "4d0"
 
     invoke-virtual {v12, v13}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v12
 
-    const-string v13, "c62d"
+    const-string v13, "c8d49b"
 
     invoke-virtual {v12, v13}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v12
 
-    const-string v13, "df2"
+    const-string v13, "9d8a"
 
     invoke-virtual {v12, v13}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v12
 
-    const-string v13, "0c"
+    const-string v13, "d87"
 
     invoke-virtual {v12, v13}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v12
 
-    const-string v13, "0888d05"
+    const-string v13, "bcb74"
 
     invoke-virtual {v12, v13}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -1724,6 +1724,8 @@
     invoke-virtual {v12, v13}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v12
+
+    const/4 v12, 0x1
 
     return v12
 
