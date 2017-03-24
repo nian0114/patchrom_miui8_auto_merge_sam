@@ -446,6 +446,12 @@
 
     iput v2, p0, Landroid/app/Notification;->knoxFlags:I
 
+    new-instance v0, Landroid/app/MiuiNotification;
+
+    invoke-direct {v0}, Landroid/app/MiuiNotification;-><init>()V
+
+    iput-object v0, p0, Landroid/app/Notification;->extraNotification:Landroid/app/MiuiNotification;
+
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v0
@@ -504,6 +510,12 @@
 
     iput v1, p0, Landroid/app/Notification;->knoxFlags:I
 
+    new-instance v0, Landroid/app/MiuiNotification;
+
+    invoke-direct {v0}, Landroid/app/MiuiNotification;-><init>()V
+
+    iput-object v0, p0, Landroid/app/Notification;->extraNotification:Landroid/app/MiuiNotification;
+
     iput p1, p0, Landroid/app/Notification;->icon:I
 
     iput-object p2, p0, Landroid/app/Notification;->tickerText:Ljava/lang/CharSequence;
@@ -561,6 +573,12 @@
     iput-object v0, p0, Landroid/app/Notification;->extras:Landroid/os/Bundle;
 
     iput v1, p0, Landroid/app/Notification;->knoxFlags:I
+
+    new-instance v0, Landroid/app/MiuiNotification;
+
+    invoke-direct {v0}, Landroid/app/MiuiNotification;-><init>()V
+
+    iput-object v0, p0, Landroid/app/Notification;->extraNotification:Landroid/app/MiuiNotification;
 
     new-instance v0, Landroid/app/Notification$Builder;
 
@@ -641,6 +659,12 @@
     iput-object v5, p0, Landroid/app/Notification;->extras:Landroid/os/Bundle;
 
     iput v6, p0, Landroid/app/Notification;->knoxFlags:I
+
+    new-instance v1, Landroid/app/MiuiNotification;
+
+    invoke-direct {v1}, Landroid/app/MiuiNotification;-><init>()V
+
+    iput-object v1, p0, Landroid/app/Notification;->extraNotification:Landroid/app/MiuiNotification;
 
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
@@ -997,6 +1021,10 @@
     move-result v5
 
     iput v5, p0, Landroid/app/Notification;->color:I
+
+    iget-object v5, p0, Landroid/app/Notification;->extraNotification:Landroid/app/MiuiNotification;
+
+    invoke-virtual {v5, p1}, Landroid/app/MiuiNotification;->readFromParcel(Landroid/os/Parcel;)V
 
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
@@ -1826,6 +1854,12 @@
     invoke-virtual {p1}, Landroid/app/Notification;->lightenPayload()V
 
     :cond_b
+    iget-object v5, p1, Landroid/app/Notification;->extraNotification:Landroid/app/MiuiNotification;
+
+    iget-object v6, p0, Landroid/app/Notification;->extraNotification:Landroid/app/MiuiNotification;
+
+    invoke-virtual {v5, v6}, Landroid/app/MiuiNotification;->setTo(Landroid/app/MiuiNotification;)V
+
     iget v5, p0, Landroid/app/Notification;->twQuickPanelEvent:I
 
     iput v5, p1, Landroid/app/Notification;->twQuickPanelEvent:I
@@ -2795,6 +2829,10 @@
     iget v3, p0, Landroid/app/Notification;->color:I
 
     invoke-virtual {p1, v3}, Landroid/os/Parcel;->writeInt(I)V
+
+    iget-object v3, p0, Landroid/app/Notification;->extraNotification:Landroid/app/MiuiNotification;
+
+    invoke-virtual {v3, p1, p2}, Landroid/app/MiuiNotification;->writeToParcel(Landroid/os/Parcel;I)V
 
     iget v3, p0, Landroid/app/Notification;->twQuickPanelEvent:I
 

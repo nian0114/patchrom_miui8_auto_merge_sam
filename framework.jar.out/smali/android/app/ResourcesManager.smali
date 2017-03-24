@@ -714,6 +714,10 @@
     :cond_4
     move-object/from16 v0, p1
 
+    invoke-static {v7, v0}, Landroid/app/MiuiThemeHelper;->handleExtraConfigurationChanges(ILandroid/content/res/Configuration;)V
+
+    move-object/from16 v0, p1
+
     iget-object v0, v0, Landroid/content/res/Configuration;->locale:Ljava/util/Locale;
 
     move-object/from16 v30, v0
