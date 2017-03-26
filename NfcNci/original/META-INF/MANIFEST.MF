@@ -1,0 +1,111 @@
+Manifest-Version: 1.0
+Created-By: 1.7.0_55 (Oracle Corporation)
+
+Name: res/layout/screenshot.xml
+SHA1-Digest: 4MINE9zVEaxHZ3scH82Jbi41CKQ=
+
+Name: res/drawable/stat_sys_nfc_on.spr
+SHA1-Digest: MVhxprf9YnfRcUyI12kpESuMlaQ=
+
+Name: res/drawable/ic_expand_less.xml
+SHA1-Digest: cgxe/nNyV0Ji8jOlXm7QhvSUVC8=
+
+Name: res/drawable/stat_sys_nfc_on_nrj.spr
+SHA1-Digest: 4GEWCWurVtcNSqv9axpbamUAXPk=
+
+Name: res/layout/browser_dialog.xml
+SHA1-Digest: vrb5uaMvHtdL6NGCFIAIV7KAT3k=
+
+Name: res/layout/cardemu_resolver.xml
+SHA1-Digest: CANg8TqaTtzQd9BnfKIKUBZAiPE=
+
+Name: resources.arsc
+SHA1-Digest: kXE4QAfKJivZMbZgeTksj3fL7FY=
+
+Name: res/layout/hce_apps_list_item.xml
+SHA1-Digest: +jk/tNrAGCHi8nJoi+htckdlmpc=
+
+Name: res/layout/tapagain.xml
+SHA1-Digest: 7zT9U5NvbGhndFy3UW1HPjZ0vKA=
+
+Name: AndroidManifest.xml
+SHA1-Digest: LEBPO0pFwn05c6M8ZvD6yO2+cBQ=
+
+Name: res/drawable/secret_mode_h.spr
+SHA1-Digest: HSTk//aldWOOFMZ9Ej5YjOQMasQ=
+
+Name: res/layout/cardemu_item.xml
+SHA1-Digest: 9SeZ7KLszQ0CQrqvP5uYLdYeU8Q=
+
+Name: res/drawable-xxhdpi-v4/tap_again.qmg
+SHA1-Digest: lMPvMdBIOe7GY0swNsSO3dDbqxw=
+
+Name: res/drawable-mdpi-v4/back.qmg
+SHA1-Digest: YKjSKr776aYGfX7W9u6ZJqpqsiQ=
+
+Name: res/drawable-xxxhdpi-v4/tap_again.miq
+SHA1-Digest: iSQ/K+Lms+hQmzxQJEo41Y53FKc=
+
+Name: res/drawable/secret_mode.spr
+SHA1-Digest: r9RGHN4tPFcV0Eb9kfjWu7g2VSk=
+
+Name: res/drawable-xxhdpi-v4/android_beam.qmg
+SHA1-Digest: /sD+p/CZosStqfWRTUiDA66RkBE=
+
+Name: res/layout/pop_up.xml
+SHA1-Digest: UBt5qXqZzdrvDRj/5r1FTCakar4=
+
+Name: res/drawable-xxhdpi-v4/icon.qmg
+SHA1-Digest: snZPnC+mVaKSr+BkxzAiTXo2AkE=
+
+Name: res/layout/password_check_dialog.xml
+SHA1-Digest: TaMjheM9KnuSXBY15kGMj0oWuMA=
+
+Name: res/layout/cardemu_payment_item.xml
+SHA1-Digest: mw+9peVPZpORvCoxxhi7xuCdFVk=
+
+Name: res/drawable/stat_sys_nfc_on_att.spr
+SHA1-Digest: MVhxprf9YnfRcUyI12kpESuMlaQ=
+
+Name: res/raw/start.ogg
+SHA1-Digest: XlOShJigvs0rJkntDtyUo5qjUp4=
+
+Name: res/layout/contact_dialog.xml
+SHA1-Digest: n25QroFxDAhtV1ZzZM4KIcvyUCU=
+
+Name: res/layout/nfc_turn_on_dialog.xml
+SHA1-Digest: gNc07YaShcLIMDrhDqSK8Xw7zhU=
+
+Name: res/drawable-xxhdpi-v4/ic_menu_cancel_holo_dark.pio
+SHA1-Digest: 0Ve8K22e49FpxRvjcV9ufPmrVcE=
+
+Name: assets/star.png
+SHA1-Digest: Fro9qbIdO6h/7qiYdtxF8u2beSA=
+
+Name: res/drawable/ic_expand_more.xml
+SHA1-Digest: De+jZl21UDNHnGxUEMHicf1Bhy4=
+
+Name: res/layout/table_full_dialog.xml
+SHA1-Digest: Yc6D4W62NldpiIRl3UExrXjwFhs=
+
+Name: res/layout/nfc_common_dialog_nocheck.xml
+SHA1-Digest: 2pYgWizJvbSYUF6zohruPnbw5WM=
+
+Name: res/raw/end.ogg
+SHA1-Digest: ivjUVBSOt2ol3ugsZwn6Dj1QPZw=
+
+Name: res/drawable/ic_expand.xml
+SHA1-Digest: ghuSRQSSzrSq+szXMvLbeNKnyMk=
+
+Name: res/drawable-hdpi-v4/nfc.qmg
+SHA1-Digest: IJ9tQz8IEl1QBT/mVIJbs3awEag=
+
+Name: res/drawable/nfc_service.spr
+SHA1-Digest: YUO6rUDzEaWXrTQFvOH0bJjeR2Y=
+
+Name: res/raw/error.ogg
+SHA1-Digest: 6M1KaUmR7XxECN5R3Z2CeyfZQJQ=
+
+Name: res/layout/nfc_common_dialog.xml
+SHA1-Digest: da0znSZ26wSuHCaUtC6cyr36CWw=
+
