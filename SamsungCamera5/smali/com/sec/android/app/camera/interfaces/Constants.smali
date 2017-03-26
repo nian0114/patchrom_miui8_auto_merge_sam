@@ -6,7 +6,7 @@
 # static fields
 .field public static final ACTIVITY_CLASS_NAME_ANIMATEDGIF:Ljava/lang/String; = "com.sec.agif_maker.GifMakerActivity"
 
-.field public static final ACTIVITY_CLASS_NAME_GALLERY3D:Ljava/lang/String; = "com.sec.android.gallery3d.app.GalleryActivity"
+.field public static final ACTIVITY_CLASS_NAME_GALLERY3D:Ljava/lang/String; = "com.miui.gallery.activity.HomePageActivity"
 
 .field public static final ACTIVITY_CLASS_NAME_VIDEOPLAYER:Ljava/lang/String; = "com.samsung.android.video.player.activity.MoviePlayer"
 
@@ -30,7 +30,7 @@
 
 .field public static final PACKAGE_NAME_ANIMATEDGIF:Ljava/lang/String; = "com.sec.agif_maker"
 
-.field public static final PACKAGE_NAME_GALLERY3D:Ljava/lang/String; = "com.sec.android.gallery3d"
+.field public static final PACKAGE_NAME_GALLERY3D:Ljava/lang/String; = "com.miui.gallery"
 
 .field public static final PACKAGE_NAME_QR_AGENT:Ljava/lang/String; = "com.samsung.android.app.qragent"
 

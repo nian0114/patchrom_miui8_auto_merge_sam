@@ -9368,7 +9368,7 @@
 
     .line 8129
     :cond_2
-    const-string v5, "com.sec.android.gallery3d"
+    const-string v5, "com.miui.gallery"
 
     invoke-static {p0, v5}, Lcom/sec/android/app/camera/util/Util;->isPkgEnabled(Landroid/content/Context;Ljava/lang/String;)Z
 
@@ -9377,7 +9377,7 @@
     if-nez v5, :cond_3
 
     .line 8130
-    const-string v5, "com.sec.android.gallery3d"
+    const-string v5, "com.miui.gallery"
 
     invoke-virtual {p0, v5}, Lcom/sec/android/app/camera/Camera;->showApplicationDisabledPopup(Ljava/lang/String;)V
 
@@ -9435,9 +9435,9 @@
 
     .line 8139
     .local v2, "intent":Landroid/content/Intent;
-    const-string v5, "com.sec.android.gallery3d"
+    const-string v5, "com.miui.gallery"
 
-    const-string v6, "com.sec.android.gallery3d.app.GalleryActivity"
+    const-string v6, "com.miui.gallery.activity.HomePageActivity"
 
     invoke-virtual {v2, v5, v6}, Landroid/content/Intent;->setClassName(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
@@ -20185,13 +20185,13 @@
     .line 5346
     new-instance v8, Landroid/content/Intent;
 
-    const-string v13, "com.sec.android.gallery3d.service.QuickViewService"
+    const-string v10, "com.miui.gallery.service.QuickViewService"
 
     invoke-direct {v8, v13}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
     .line 5347
     .local v8, "intent":Landroid/content/Intent;
-    const-string v13, "com.sec.android.gallery3d"
+    const-string v10, "com.miui.gallery"
 
     invoke-virtual {v8, v13}, Landroid/content/Intent;->setPackage(Ljava/lang/String;)Landroid/content/Intent;
 
@@ -23628,7 +23628,7 @@
 
     .line 2389
     :cond_2
-    const-string v2, "com.sec.android.gallery3d"
+    const-string v2, "com.miui.gallery"
 
     invoke-static {p0, v2}, Lcom/sec/android/app/camera/util/Util;->isPkgEnabled(Landroid/content/Context;Ljava/lang/String;)Z
 
@@ -23637,7 +23637,7 @@
     if-nez v2, :cond_3
 
     .line 2390
-    const-string v2, "com.sec.android.gallery3d"
+    const-string v2, "com.miui.gallery"
 
     invoke-virtual {p0, v2}, Lcom/sec/android/app/camera/Camera;->showApplicationDisabledPopup(Ljava/lang/String;)V
 
@@ -37309,9 +37309,9 @@
 
     .line 4193
     .local v1, "galleryIntent":Landroid/content/Intent;
-    const-string v4, "com.sec.android.gallery3d"
+    const-string v4, "com.miui.gallery"
 
-    const-string v5, "com.sec.android.gallery3d.app.GalleryActivity"
+    const-string v5, "com.miui.gallery.activity.HomePageActivity"
 
     invoke-virtual {v1, v4, v5}, Landroid/content/Intent;->setClassName(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
