@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:custom="http://schemas.android.com/apk/res-auto">
+    <SwitchPreference android:title="@string/Title_MotionPhoto" android:key="pref_global_motion_photo_key" android:defaultValue="false" />
+    <SwitchPreference android:title="@string/Title_VideoStabilisation" android:key="pref_global_camcorder_antishake_key" android:defaultValue="true" />
+    <com.sec.android.app.camera.setting.SpinnerPreference android:title="@string/Title_Guideline" android:key="pref_camera_guideline_key" custom:defaultValue="0" custom:entryValues="@array/guideline_value" custom:entries="@array/guideline_list" />
+    <SwitchPreference android:title="@string/Title_GPS" android:key="pref_global_setup_gps_key" android:defaultValue="false" />
+    <SwitchPreference android:title="@string/Title_ShutterSound" android:key="pref_global_camera_shutter_sound_key" android:defaultValue="true" />
+    <SwitchPreference android:title="@string/Title_Review" android:key="pref_global_setup_review_key" android:defaultValue="false" />
+    <SwitchPreference android:title="@string/Title_QuickShot" android:key="pref_global_camera_quick_shot" android:defaultValue="true" />
+    <com.sec.android.app.camera.setting.SpinnerPreference android:title="@string/Title_Volume_Key_As" android:key="pref_global_camera_volume_key_as" custom:defaultValue="1" custom:entryValues="@array/volume_key_value" custom:entries="@array/volume_key_list" />
+    <com.sec.android.app.camera.setting.SpinnerPreference android:title="@string/Title_FocusMode" android:key="pref_camera_focus_key" custom:defaultValue="1" custom:entryValues="@array/focus_mode_value" custom:entries="@array/focus_mode_list" />
+</PreferenceScreen>

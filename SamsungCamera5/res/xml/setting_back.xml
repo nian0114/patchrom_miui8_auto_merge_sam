@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:custom="http://schemas.android.com/apk/res-auto">
+    <com.sec.android.app.camera.setting.SettingPreference android:title="@string/Title_Rear_CamcorderResolution" android:key="camcorder_resolution" />
+    <com.sec.android.app.camera.setting.SpinnerPreference android:title="@string/Title_Rear_CamcorderResolution" android:key="camcorder_resolution_spinner" />
+    <SwitchPreference android:title="@string/Title_MotionPhoto" android:key="pref_global_motion_photo_key" android:defaultValue="0" />
+    <SwitchPreference android:title="@string/Title_TrackingAF" android:key="pref_global_setup_object_trackingaf_key" android:defaultValue="false" />
+    <com.sec.android.app.camera.setting.SpinnerPreference android:title="@string/Title_FocusMode" android:key="pref_camera_focus_key" custom:defaultValue="1" custom:entryValues="@array/focus_mode_value" custom:entries="@array/focus_mode_list" />
+    <SwitchPreference android:title="@string/Title_VideoStabilisation" android:key="pref_global_camcorder_antishake_key" android:defaultValue="true" />
+    <com.sec.android.app.camera.setting.SpinnerPreference android:title="@string/Title_Viewmode" android:key="pref_global_camera_fullpreview_key" custom:defaultValue="0" custom:entryValues="@array/view_mode_value" custom:entries="@array/view_mode_list" />
+    <com.sec.android.app.camera.setting.SpinnerPreference android:title="@string/Title_Guideline" android:key="pref_camera_guideline_key" custom:defaultValue="0" custom:entryValues="@array/guideline_value" custom:entries="@array/guideline_list" />
+    <SwitchPreference android:title="@string/Title_GPS" android:key="pref_global_setup_gps_key" android:defaultValue="false" />
+    <com.sec.android.app.camera.setting.SettingPreference android:title="@string/Title_Shooting_Method_Rear" android:key="shooting_method" />
+    <SwitchPreference android:title="@string/Title_Review" android:key="pref_global_setup_review_key" android:defaultValue="false" />
+    <SwitchPreference android:title="@string/Title_QuickShot" android:key="pref_global_camera_quick_shot" android:defaultValue="true" />
+    <SwitchPreference android:title="@string/Title_Picture_Format" android:key="pref_global_camera_picture_format" android:defaultValue="false" />
+    <com.sec.android.app.camera.setting.SpinnerPreference android:title="@string/Title_Storage" android:key="pref_global_setup_storage_key" custom:defaultValue="0" custom:entryValues="@array/storage_value" custom:entries="@array/storage_list" />
+    <com.sec.android.app.camera.setting.SpinnerPreference android:title="@string/Title_Volume_Key_As" android:key="pref_global_camera_volume_key_as" custom:defaultValue="1" custom:entryValues="@array/volume_key_value" custom:entries="@array/volume_key_list" />
+    <SwitchPreference android:title="@string/Title_ShutterSound" android:key="pref_global_camera_shutter_sound_key" android:defaultValue="true" />
+    <SwitchPreference android:title="@string/Title_QRCode" android:key="pref_camera_qrcode_detection" android:defaultValue="true" />
+    <SwitchPreference android:title="@string/Title_rear_lens_distortion_correction" android:key="pref_global_rear_lens_distortion_correction_key" android:defaultValue="false" />
+    <Preference android:title="@string/reset_title" />
+</PreferenceScreen>

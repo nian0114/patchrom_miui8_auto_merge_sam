@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer name="proslidemenu_indicator_size">18</integer>
+    <integer name="proslidemenu_value_text_size">19</integer>
+    <integer name="face_default_thickness">2</integer>
+    <integer name="palm_default_thickness">2</integer>
+    <integer name="datatext_font_size">72</integer>
+    <integer name="easy_mode_menu_info_text_font_size">22</integer>
+    <integer name="easy_mode_menu_item_title_font_size">30</integer>
+    <integer name="mode_infopopup_description_font_size">20</integer>
+    <integer name="remaincounterindicator_text_size">16</integer>
+</resources>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <attr name="defaultValue" format="integer" />
+    <attr name="entryValues" format="reference" />
+    <attr name="entries" format="reference" />
+</resources>
