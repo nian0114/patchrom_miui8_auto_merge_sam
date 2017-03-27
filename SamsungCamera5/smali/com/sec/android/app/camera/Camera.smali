@@ -9437,7 +9437,7 @@
     .local v2, "intent":Landroid/content/Intent;
     const-string v5, "com.miui.gallery"
 
-    const-string v6, "com.miui.gallery.activity.HomePageActivity"
+    const-string v6, "com.miui.gallery.activity.ExternalPhotoPageActivity"
 
     invoke-virtual {v2, v5, v6}, Landroid/content/Intent;->setClassName(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
@@ -37311,7 +37311,7 @@
     .local v1, "galleryIntent":Landroid/content/Intent;
     const-string v4, "com.miui.gallery"
 
-    const-string v5, "com.miui.gallery.activity.HomePageActivity"
+    const-string v5, "com.miui.gallery.activity.ExternalPhotoPageActivity"
 
     invoke-virtual {v1, v4, v5}, Landroid/content/Intent;->setClassName(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
